@@ -31,7 +31,7 @@ function Navbar() {
 
       {/* Desktop links */}
       <div className={styles.navbarLinks}>
-        <a href="#">About</a>
+        <a href="#">Home</a>
 
         <div
           className={styles.dropdown}
@@ -61,8 +61,7 @@ function Navbar() {
           )}
         </div>
 
-        <a href="#">PKF Firms</a>
-        <a href="#">News & Events</a>
+        <a href="#">About Us</a>
       </div>
 
       {/* Hamburger / Cross toggle */}
@@ -80,10 +79,9 @@ function Navbar() {
         </div>
 
         <div className={styles.slideMenuContent}>
-          <a href="#">About <FaChevronRight /></a>
+          <a href="#">Home<FaChevronRight /></a>
           <a onClick={() => setSubMenuOpen(true)}>Services <FaChevronRight /></a>
-          <a href="#">PKF Firms <FaChevronRight /></a>
-          <a href="#">News & Events <FaChevronRight /></a>
+          <a href="#">About Us<FaChevronRight /></a>
         </div>
 
         {/* Submenu */}
