@@ -24,6 +24,8 @@ function Navbar() {
   }, [menuOpen]);
 
   return (
+    <>
+    <div className={styles.navparent}>
     <nav className={styles.navbar}>
       <div className={styles.navbarLeft}>
         <img src="logo.png" alt="PKF Logo" />
@@ -103,7 +105,10 @@ function Navbar() {
         
       </div>
     </nav>
+    </div>
+ </>
   );
+
 }
 
 export default Navbar;

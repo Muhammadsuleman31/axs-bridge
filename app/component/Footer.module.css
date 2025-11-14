@@ -110,7 +110,7 @@
 }
 
 .sectionlinks{
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 @media (max-width: 1000px) {
@@ -194,4 +194,11 @@
   .rotate {
     transform: rotate(180deg);
   }
+  .sectionlinks{
+    font-size: 1.1rem;
+}
+
+.talk{
+    padding: 0px 6vw;
+}
 }
