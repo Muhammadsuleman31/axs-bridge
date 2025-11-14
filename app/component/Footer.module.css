@@ -123,4 +123,12 @@
     grid-template-columns: 1fr 1fr 1fr;
     padding: 4vh 6vw;
   }
+
+  .talk h1{
+    font-size: 5rem;
+  }
+
+  .arrowIcon {
+  font-size: 8rem; 
+}
   }

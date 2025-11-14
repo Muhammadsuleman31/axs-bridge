@@ -202,3 +202,20 @@
   gap: 35px;
     }
   }
+
+
+  @media (max-width: 486px) {
+
+  .text {
+  margin: 2vw 4vw;}
+
+  .desc p{
+
+    font-size: 1.2rem !important;
+  }
+  .servicesheading h1{
+    font-size: 2.8rem !important;
+}
+
+  
+}
