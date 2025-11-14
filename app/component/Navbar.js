@@ -33,7 +33,7 @@ function Navbar() {
 
       {/* Desktop links */}
       <div className={styles.navbarLinks}>
-        <a href="#">Home</a>
+        <a href="/">Home</a>
 
         <div
           className={styles.dropdown}
@@ -63,7 +63,7 @@ function Navbar() {
           )}
         </div>
 
-        <a href="#">About Us</a>
+        <a href="/about">About Us</a>
       </div>
 
       {/* Hamburger / Cross toggle */}

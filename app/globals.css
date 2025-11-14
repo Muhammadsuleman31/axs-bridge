@@ -54,7 +54,7 @@ button:hover {
 }
 
 .gradient-text {
-  background: linear-gradient(90deg, #2460e4, #1e3b8c);
+  background: linear-gradient(90deg, #2460e4, #0b1f64);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;

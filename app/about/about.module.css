@@ -1,0 +1,97 @@
+.about {
+  padding: 2vw 10vw;
+  background: linear-gradient(to right, #fafafa, #e9eff7);
+  position: relative;
+  overflow: hidden;
+}
+
+/* OPTIONAL: Subtle premium noise texture (uncomment if you want)
+.about::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/noise.png"); 
+  opacity: 0.06;
+  pointer-events: none;
+}
+*/
+
+.about::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("/bg1.jpg"); 
+   background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.09;
+  background-size: cover; 
+  pointer-events: none;
+}
+
+.about h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.about h2 {
+  font-size: 2.2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Paragraph spacing */
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #1e3b8a;
+  margin-bottom: 1.2rem;
+}
+
+/* ---------- Gradient Text ---------- */
+.gradientText {
+  background: linear-gradient(90deg, #1e3b8c, #2460e4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+/* ---------- Section Title Accent Line ---------- */
+.sectionTitle {
+  position: relative;
+  padding-left: 14px;
+}
+
+.sectionTitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 3px;
+  width: 4px;
+  height: 90%;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #2460e4, #1e3b8c);
+}
+
+/* ---------- Fade In Up Animation ---------- */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width: 1000px) {
+    .about {
+  padding: 1vw 8vw;}
+}
+@media (max-width: 486px) {
+        .about {
+  padding: 0vw 6vw;}
+}
