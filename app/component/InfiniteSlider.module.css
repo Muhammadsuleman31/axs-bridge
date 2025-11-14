@@ -8,6 +8,18 @@
 }
 
 .sliderViewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sliderViewport::-webkit-scrollbar {
+  display: none;
+}
+
+
+.sliderViewport {
   overflow: hidden;
   flex: 1;
 }

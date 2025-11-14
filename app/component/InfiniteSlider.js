@@ -16,6 +16,7 @@ function FiniteSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(1);
   const [slideWidth, setSlideWidth] = useState(0);
+
   const sliderRef = useRef(null);
   const trackRef = useRef(null);
 
@@ -39,18 +40,21 @@ function FiniteSlider() {
       }
     }
 
-    // Recalculate on resize and when fonts fully load
     calculateDimensions();
     window.addEventListener("resize", calculateDimensions);
-    window.addEventListener("load", calculateDimensions);
-    return () => {
-      window.removeEventListener("resize", calculateDimensions);
-      window.removeEventListener("load", calculateDimensions);
-    };
+    return () => window.removeEventListener("resize", calculateDimensions);
   }, []);
 
+  // Sync button navigation with scroll
+  useEffect(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.scrollTo({
+      left: currentIndex * slideWidth,
+      behavior: "smooth",
+    });
+  }, [currentIndex, slideWidth]);
+
   const slideNext = () => {
-    // allow last slide to fully come into view
     const maxIndex = Math.ceil(slidesData.length - slidesPerView);
     setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
   };
@@ -63,22 +67,12 @@ function FiniteSlider() {
 
   return (
     <div className={styles.sliderContainer}>
-      <button
-        className={styles.arrow}
-        onClick={slidePrev}
-        disabled={currentIndex === 0}
-      >
+      <button className={styles.arrow} onClick={slidePrev} disabled={currentIndex === 0}>
         &#8249;
       </button>
 
       <div className={styles.sliderViewport} ref={sliderRef}>
-        <div
-          className={styles.sliderTrack}
-          ref={trackRef}
-          style={{
-            transform: `translateX(-${currentIndex * slideWidth}px)`,
-          }}
-        >
+        <div className={styles.sliderTrack} ref={trackRef}>
           {slidesData.map((slide) => (
             <div className={styles.slide} key={slide.id}>
               <img src={slide.img} alt={slide.title} />
@@ -88,11 +82,7 @@ function FiniteSlider() {
         </div>
       </div>
 
-      <button
-        className={styles.arrow}
-        onClick={slideNext}
-        disabled={currentIndex >= maxIndex}
-      >
+      <button className={styles.arrow} onClick={slideNext} disabled={currentIndex >= maxIndex}>
         &#8250;
       </button>
     </div>
