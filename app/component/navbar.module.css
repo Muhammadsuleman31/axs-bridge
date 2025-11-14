@@ -321,3 +321,10 @@
 body.menu-open {
   overflow: hidden;
 }
+
+  @media (max-width: 486px) {
+
+    .navbar{
+      padding: 0 6vw;
+    }
+  }
