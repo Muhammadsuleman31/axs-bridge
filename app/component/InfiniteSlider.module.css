@@ -7,16 +7,7 @@
   box-sizing: border-box;
 }
 
-.sliderViewport {
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-}
 
-.sliderViewport::-webkit-scrollbar {
-  display: none;
-}
 
 
 .sliderViewport {
@@ -85,11 +76,11 @@
 
 .arrow:hover:not(:disabled) {
   background-color: #FFD700;
-  color: #1A2B4C;
+  color: #f8f8f8;
 }
 
 .arrow:disabled {
-  opacity: 0.5;
+  opacity: 0;
   cursor: not-allowed;
 }
 
@@ -111,16 +102,21 @@
 
   /* Minimal arrows on mobile */
   .arrow {
-    background: none;
-    color: #1A2B4C;
-    font-size: 20px;
-    padding: 0;
-    margin: 0 5px;
-    border-radius: 0;
-  }
+      background-color: transparent !important;
+      background: transparent !important;
+      border: none;
+      box-shadow: none !important;
+  color: #1A2B4C;
+  font-size: 22px;
+  padding: 4px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin: 0 0;
+  transition: background 0.3s;
+}
 
-  .arrow:hover:not(:disabled) {
-    background: none;
-    color: #FFD700;
-  }
+.arrow:hover:not(:disabled) {
+  background-color: #FFD700;
+  color: #1A2B4C;
+}
 }
