@@ -1,0 +1,311 @@
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(0, 69, 149, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 69, 149, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.navbarLeft img {
+  height: 55px;
+}
+
+/* Desktop Links */
+.navbarLinks {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.navbarLinks a {
+  text-decoration: none;
+  color: #004595;
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.navbarLinks a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #004595;
+  transition: width 0.3s ease;
+}
+
+.navbarLinks a:hover::after {
+  width: 100%;
+}
+
+.navbarLinks a:hover {
+  color: #1a2b4c;
+}
+
+/* Services Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.servicesLink {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.chevron {
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate chevron on hover */
+.dropdown:hover .chevron {
+  transform: rotate(180deg);
+}
+
+/* Dropdown Menu */
+.dropdownMenu {
+  position: absolute;
+  
+  top: 20px; /* start right below the navbar */
+  left: 0;
+  background: #ffffff;
+  
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  min-width: 230px;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px); /* start slightly above */
+  
+  transition: all 0.3s ease;
+  pointer-events: none;
+
+  z-index: 5; /* lower than navbar (navbar z-index: 10) */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0); /* slide down into view */
+  pointer-events: auto;
+}
+
+
+.dropdownMenu a {
+  color: #004595;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.dropdownMenu a:hover {
+  background: #f2f7ff;
+  color: #002f6c;
+}
+
+/* Hamburger */
+.hamburger {
+  font-size: 26px;
+  cursor: pointer;
+  color: #004595;
+  display: none;
+  z-index: 2001;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.hamburger:hover{
+   color: #ebb812;
+}
+
+.hamburger.open:hover {
+   color: #ebb812;
+}
+.hamburger.open {
+  color: white;
+  transform: rotate(90deg);
+}
+
+/* Mobile Slide Menu */
+.slideMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(0deg, #0d1a3d, #000000);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.4s ease;
+  z-index: 1500;
+  overflow-y: auto;
+}
+
+.slideMenu.open {
+  right: 0;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.panelHeader img {
+  height: 40px;
+}
+
+.slideMenuContent {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slideMenuContent a {
+  color: white;
+
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   transition: color 0.5s;
+}
+
+
+
+.slideMenuContent a:hover{
+    color: #ebb812;
+}
+
+
+
+
+/* Sub Menu (Mobile) */
+.subMenu {
+  position: fixed;
+  top: 90px;
+  left: -100%;
+  width: 100%;
+  height: calc(100vh - 90px);
+  background: linear-gradient(to right, #fafafa, #e9eff7);
+  color: #004595;
+  display: flex;
+  flex-direction: column;
+  transition: left 0.4s ease;
+  z-index: 1600;
+}
+
+.subMenu.open {
+  left: 0;
+}
+
+.subMenuHeader {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 30px;
+  font-weight: 600;
+  background: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+}
+
+.subMenuHeader:hover span,
+.subMenuHeader:hover svg {
+  color: #ebb812;
+}
+
+.subMenuHeader svg {
+  cursor: pointer;
+  color: #004595;
+}
+
+.subMenuContent {
+  padding: 10px 30px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.subMenuContent div {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.subMenuContent div:hover {
+  color: #004595;
+}
+
+
+.subMenuContent a {
+  position: relative; /* Needed for ::after to position correctly */
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Create the underline (hidden initially) */
+.subMenuContent a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* adjust spacing below text */
+  width: 0;
+  height: 2px;
+  background-color: #ebb812;
+  transition: width 0.3s ease;
+}
+
+/* On hover — change color + reveal underline */
+.subMenuContent a:hover {
+  color: #ebb812;
+}
+
+.subMenuContent a:hover::after {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navbarLinks {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* Prevent background scroll when menu is open */
+body.menu-open {
+  overflow: hidden;
+}

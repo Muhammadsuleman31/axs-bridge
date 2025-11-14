@@ -1,0 +1,126 @@
+.logo{
+    height: 9rem;
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    justify-content: space-around;
+    align-items:start;
+      background: linear-gradient(0deg, #0d1a3d, #000000);
+     /* background-color: #0a1430;;  */
+   /* background: linear-gradient(90deg, #1e3b8c, #1e3b8c); */
+    padding: 5vh 0vh;
+    color: #e9eff7;
+}
+
+
+.sectionlinks{
+    display: grid;
+    gap: 10px;
+    font-weight: 300;
+     
+}
+
+.sectionlinks a{
+   
+    transition: color 0.5s;
+}
+
+.sectionlinks a:hover{
+    color: #ebb812;
+}
+
+.socialIcons{
+    display: flex;
+    gap: 20px;
+}
+
+.socialIcons a {
+  color: #fafafa;       /* default icon color */
+  transition: color 0.3s;
+}
+
+.socialIcons a:hover {
+  color: #ebb812;      /* example: change color on hover */
+}
+
+
+ .section1 {
+ justify-self: center;
+}
+/*
+.section2 {
+    background-color: pink;
+}
+.section3 {
+    background-color: pink;
+}
+.section4 {
+    background-color: pink;
+} */
+
+.talk{
+    padding: 0px 10vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.talk h1{
+    font-size: 6rem;
+}
+
+.talk{
+     background-color: #fafafa;
+     color: #1A2B4C;
+}
+.arrowContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrowLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+ color: #1e3b8c;
+  transition: color 0.3s ease;
+}
+
+
+.arrowLink:hover {
+ color: linear-gradient(90deg, #1e3b8c, #2460e4);
+}
+
+.arrowIcon {
+  font-size: 10rem; /* big size like your example */
+  color: inherit; /* inherits from .arrowLink */
+  transition: transform 0.3s ease;
+}
+
+.talk:hover .arrowIcon {
+  transform: translate(5px, -5px); /* moves slightly up-right on hover */
+}
+
+.talk{
+    cursor: pointer;
+}
+
+.sectionlinks{
+    font-size: 1rem;
+}
+
+@media (max-width: 1000px) {
+  .section1{
+    display: none;
+  }
+
+  .footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 4vh 6vw;
+  }
+  }
