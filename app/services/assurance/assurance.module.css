@@ -4,14 +4,18 @@
   padding: 0px 6vw;
   font-family: "Inter", sans-serif;
   background: linear-gradient(to right, #e9eff7, #fafafa);
-  color: #1a2b4c;
+   color: #1e3b8a;
    text-align: justify;
 
+}
+.list, .paragraph {
+  color: #1a2b4c !important;
 }
 
 
 /* Titles & text */
 .title {
+    
   font-size: 2rem;
   margin-bottom: 15px;
 }
