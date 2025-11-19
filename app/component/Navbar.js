@@ -40,7 +40,7 @@ function Navbar() {
           onMouseEnter={() => setServicesHover(true)}
           onMouseLeave={() => setServicesHover(false)}
         >
-          <a href="#" className={styles.servicesLink}>
+          <a href="/services" className={styles.servicesLink}>
             Services
             <FaChevronDown
               className={`${styles.chevron} ${
@@ -52,7 +52,7 @@ function Navbar() {
           {/* Dropdown menu */}
           {servicesHover && (
             <div className={styles.dropdownMenu}>
-              <a href="#">Assurance</a>
+              <a href="/services/assurance">Assurance</a>
               <a href="#">Tax</a>
               <a href="#">Advisory</a>
               <a href="#">Business Solutions</a>

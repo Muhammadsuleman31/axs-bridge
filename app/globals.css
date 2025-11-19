@@ -7,9 +7,7 @@ html, body, p {
   font-family: 'Inter';
  
 }
-html, body{
-   overflow-x: hidden;
-}
+
 
 body{
   margin-top: 80px;

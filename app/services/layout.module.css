@@ -1,0 +1,119 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #F7F8FA;
+ 
+
+}
+
+.sidebar {
+  width: 300px;
+ position: sticky;
+ top: 80px;
+ align-self: flex-start;
+  padding-top: 20px;
+}
+
+.link {
+  display: block;
+  padding: 10px 30px;
+  margin-bottom: 4px;
+   color: #002f6c;
+  text-decoration: none;
+  position: relative;
+  
+}
+
+.link:hover {
+  background: #f2f7ff;
+  color: #002f6c;
+}
+
+
+.sidebar a {
+  position: relative;
+  text-decoration: none;
+}
+
+.sidebar a::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  transform: translateX(-50%); /* centers the line */
+  width: 90%;
+  height: 0.1px;
+  background: #00459515;
+}
+
+/* Underline effect */
+.sidebar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #004595;
+  transition: width 0.3s ease;
+}
+
+/* Hover underline */
+.sidebar a:hover::after {
+  width: 100%;
+}
+
+/* Active link style */
+.sidebar a.active {
+  background: #f2f7ff;
+  color: #002f6c;
+}
+
+/* Active underline */
+.sidebar a.active::after {
+  width: 100%;
+}
+
+.subservices {
+  margin-left: 30px;
+ 
+  margin-bottom: 10px;
+}
+
+.subLink {
+  display: block;
+  padding-left: 30px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-size: 0.95em;
+  text-decoration: none;
+  color: #333;
+  
+}
+
+.subLink:hover {
+  background-color: #e0e0e0;
+}
+
+.content {
+  flex: 1;
+ background: linear-gradient(to right, #e9eff7, #fafafa);
+}
+
+/* Breadcrumb styles */
+.breadcrumb {
+  padding-left: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.breadcrumbLink {
+    color: #002f6c;
+  text-decoration: none;
+}
+
+.breadcrumbLink:hover {
+  text-decoration: underline;
+}
