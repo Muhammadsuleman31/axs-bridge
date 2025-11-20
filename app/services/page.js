@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import styles from "./services.module.css";
 import Link from "next/link";
 
 export default function ServicesPage() {
@@ -13,13 +12,10 @@ export default function ServicesPage() {
       title: "Tax",
       subservices: [
         { title: "Local Tax", url: "/services/tax/local" },
-        { title: "Corporate Tax", url: "/services/tax/corporate" },
-        { title: "Compliance", url: "/services/tax/compliance" },
-        { title: "VAT", url: "/services/tax/vat" },
-        { title: "GST", url: "/services/tax/gst" },
-        { title: "Custom and Excise", url: "/services/tax/custom-excise" },
-        { title: "Structuring", url: "/services/tax/structuring" },
-        { title: "Transfer Pricing", url: "/services/tax/transfer-pricing" },
+        { title: "Corporate Tax Compliance", url: "/services/tax/corporate" },
+        { title: "VAT GST Custom and Excise", url: "/services/tax/vat" },
+        { title: "Tax Structuring", url: "/services/tax/structuring" },
+        { title: "Transfer Pricing Services", url: "/services/tax/transfer-pricing" },
         { title: "International Tax Advisory", url: "/services/tax/international" },
       ],
       url: "/services/tax",
@@ -35,48 +31,33 @@ export default function ServicesPage() {
       ],
       url: "/services/advisory",
     },
-    {
-      title: "Business Solutions",
-      url: "/services/business-solutions",
-    },
-    {
-      title: "Corporate Finance",
-      url: "/services/corporate-finance",
-    },
-    {
-      title: "Private Capital Solutions",
-      url: "/services/private-capital-solutions",
-    },
-    {
-      title: "Sustainability & ESG",
-      url: "/services/sustainability-esg",
-    },
-    {
-      title: "Specialist Hospitality Consulting",
-      url: "/services/hospitality-consulting",
-    },
+    { title: "Business Solutions", url: "/services/business-solutions" },
+    { title: "Corporate Finance", url: "/services/corporate-finance" },
+    { title: "Private Capital Solutions", url: "/services/private-capital-solutions" },
+    { title: "Sustainability & ESG", url: "/services/sustainability-esg" },
+    { title: "Specialist Hospitality Consulting", url: "/services/hospitality-consulting" },
   ];
 
   return (
-    <div className={styles.container}>
-      <main className={styles.content}>
-        <h1 className={styles.title}>Our Services</h1>
-        <p className={styles.paragraph}>
+    <div className="servicescontainer">
+      <main>
+        <h1 className="servicestitle">Our Services</h1>
+        <p className="servicesparagraph">
           Welcome to our Services section. Explore our wide range of services including Assurance, Tax, Advisory, Business Solutions, Corporate Finance, Private Capital Solutions, and Sustainability & ESG.
         </p>
 
-        <ul className={styles.serviceList}>
+        <ul className="servicesserviceList">
           {services.map((service, idx) => (
-            <li key={idx} className={styles.serviceItem}>
-              <Link href={service.url} className={styles.serviceLink}>
+            <li key={idx} className="servicesserviceItem">
+              <Link href={service.url}>
                 {service.title}
               </Link>
 
               {service.subservices && (
-                <ul className={styles.subServiceList}>
+                <ul className="servicesNestedList">
                   {service.subservices.map((sub, subIdx) => (
-                    <li key={subIdx} className={styles.subServiceItem}>
-                      <Link href={sub.url} className={styles.serviceLink}>
+                    <li key={subIdx} className="servicesNestedList">
+                      <Link href={sub.url}>
                         {sub.title}
                       </Link>
                     </li>
