@@ -74,3 +74,218 @@ button:hover {
   color: #fff;
   transform: translateY(-2px);
 }
+
+.containerass {
+  display: flex;
+  justify-content: center;
+  padding: 0px 6vw;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to right, #e9eff7, #fafafa);
+   color: #1e3b8a;
+   text-align: justify;
+
+}
+.list, .paragraph {
+  color: #1a2b4c !important;
+}
+
+
+/* Titles & text */
+.title {
+    
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.subTitle {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+.paragraph {
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.list {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Dropdown styles */
+.dropdown {
+
+  border-radius: 6px;
+  margin: 20px 0;
+
+  overflow: hidden;
+}
+
+.dropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  
+background-color: #fafafa;
+  transition: background 0.3s ease;
+}
+
+.dropdownHeader:hover {
+  background: #e9e9e9;
+}
+
+.dropdownContent {
+    margin-left: 2vw;
+  padding: 15px 20px;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* services page ----------------------------------------------------*/
+
+/* Container */
+.servicescontainer {
+  display: flex;
+  justify-content: center;
+  padding: 0px 6vw;
+  padding-bottom: 100px;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to right, #e9eff7, #fafafa);
+  color: #1e3b8a;
+  text-align: justify;
+}
+
+.servicesNestedList {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+.servicesparagraph, 
+.serviceslist, 
+.serviceslist li {
+  color: #1a2b4c !important;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Titles & Subtitles */
+.servicestitle {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.servicessubtitle {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  margin-bottom: 8px;
+}
+
+/* Lists */
+.serviceslist {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.serviceslist li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Dropdown styles */
+.servicesdropdown {
+  border-radius: 6px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.servicesdropdownHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #fafafa;
+  transition: background 0.3s ease;
+}
+
+.servicesdropdownHeader:hover {
+  background: #e9e9e9;
+}
+
+.servicesdropdownContent {
+  margin-left: 2vw;
+  padding: 15px 20px;
+  animation: servicesfadeIn 0.3s ease forwards;
+}
+
+/* Fade in animation */
+@keyframes servicesfadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Service cards / list items */
+.servicesserviceList {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.servicesserviceItem {
+  padding: 12px 15px;
+  border-left: 4px solid #004595;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  font-weight: 500;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.servicesserviceItem:hover {
+  transform: translateX(4px);
+  background: #f5f7ff;
+}
+
+/* Make link take full item space */
+.servicesserviceItem a {
+  display: block;
+  color: #1a2b4c;
+  text-decoration: none;
+}
+
+.servicesserviceItem a:hover {
+  color: #004595;
+}
+
+
+/* services page -----------------------------------------------------*/

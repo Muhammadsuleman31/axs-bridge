@@ -14,13 +14,10 @@ function Footer() {
 
   const isOpen = (section) => openSection === section;
 
-  // -------------------------
-  // AUTO CLOSE WHEN CLICKING OUTSIDE
-  // -------------------------
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (footerRef.current && !footerRef.current.contains(e.target)) {
-        setOpenSection(null); // close all sections
+        setOpenSection(null);
       }
     };
 
@@ -30,7 +27,8 @@ function Footer() {
 
   return (
     <>
-      <a>
+    <div className={styles.talkwrapper}>
+      <a href="/contact">
         <div className={styles.talk}>
           <div className="gradient-text"><h1>LET'S TALK</h1></div>
           <div className={styles.arrowContainer}>
@@ -40,7 +38,7 @@ function Footer() {
           </div>
         </div>
       </a>
-
+</div>
       <section ref={footerRef}>
         <div className={styles.footer}>
 
@@ -57,24 +55,19 @@ function Footer() {
             >
               <h3>Services</h3>
               <FiChevronDown
-                className={`${styles.chevron} ${
-                  isOpen("services") ? styles.rotate : ""
-                }`}
+                className={`${styles.chevron} ${isOpen("services") ? styles.rotate : ""}`}
               />
             </div>
 
-            <div
-              className={`${styles.sectionlinks} ${
-                isOpen("services") ? styles.open : ""
-              }`}
-            >
-              <a>Assurance</a>
-              <a>Tax</a>
-              <a>Advisory</a>
-              <a>Business Solutions</a>
-              <a>Corporate Finance</a>
-              <a>Private Capital Solutions</a>
-              <a>Sustainability & ESG</a>
+            <div className={`${styles.sectionlinks} ${isOpen("services") ? styles.open : ""}`}>
+              <a href="/services/assurance">Assurance</a>
+              <a href="/services/tax">Tax</a>
+              <a href="/services/advisory">Advisory</a>
+              <a href="/services/business-solutions">Business Solutions</a>
+              <a href="/services/corporate-finance">Corporate Finance</a>
+              <a href="/services/private-capital">Private Capital Solutions</a>
+              <a href="/services/sustainability-esg">Sustainability & ESG</a>
+              <a href="/services/hospitality-consulting">Specialist Hospitality Consulting</a>
             </div>
           </div>
 
@@ -86,49 +79,31 @@ function Footer() {
             >
               <h3>About Us</h3>
               <FiChevronDown
-                className={`${styles.chevron} ${
-                  isOpen("about") ? styles.rotate : ""
-                }`}
+                className={`${styles.chevron} ${isOpen("about") ? styles.rotate : ""}`}
               />
             </div>
 
-            <div
-              className={`${styles.sectionlinks} ${
-                isOpen("about") ? styles.open : ""
-              }`}
-            >
-              <a>About</a>
-              <a>Cookie policy</a>
-              <a>Privacy Policy</a>
+            <div className={`${styles.sectionlinks} ${isOpen("about") ? styles.open : ""}`}>
+              <a href="/about">About</a>
+              <a href="/cookie-policy">Cookie Policy</a>
+              <a href="/privacy-policy">Privacy Policy</a>
             </div>
           </div>
 
           {/* SOCIAL */}
           <div className={styles.section4}>
-            <div
-              className={styles.sectionheading}
-              onClick={() => toggleSection("social")}
-            >
+            <div className={styles.sectionheading}>
               <h3>Follow Us</h3>
-              {/* <FiChevronDown
-                className={`${styles.chevron} ${
-                  isOpen("social") ? styles.rotate : ""
-                }`}
-              /> */}
             </div>
 
-            <div
-              className={`${styles.socialIcons} ${
-                isOpen("social") ? styles.open : styles.open
-              }`}
-            >
-              <a href="https://twitter.com" target="_blank">
+            <div className={`${styles.socialIcons} ${styles.open}`}>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                 <FaTwitter size={24} />
               </a>
-              <a href="https://facebook.com" target="_blank">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                 <FaFacebookF size={24} />
               </a>
-              <a href="https://linkedin.com" target="_blank">
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
                 <FaLinkedinIn size={24} />
               </a>
             </div>

@@ -10,13 +10,10 @@ const services = [
     path: "/services/tax",
     subservices: [
       { name: "Local Tax", path: "/services/tax/local-tax" },
-      { name: "Corporate Tax", path: "/services/tax/corporate-tax" },
-      { name: "Compliance", path: "/services/tax/compliance" },
-      { name: "VAT", path: "/services/tax/vat" },
-      { name: "GST", path: "/services/tax/gst" },
-      { name: "Custom and Excise", path: "/services/tax/custom-excise" },
-      { name: "Structuring", path: "/services/tax/structuring" },
-      { name: "Transfer Pricing", path: "/services/tax/transfer-pricing" },
+      { name: "Corporate Tax Compliance", path: "/services/tax/corporate-tax-compliance" },
+      { name: "VAT GST Customs and Excise", path: "/services/tax/vat-gst-custom&excise" },
+      { name: "Tax Structuring", path: "/services/tax/structuring" },
+      { name: "Transfer Pricing Services", path: "/services/tax/transfer-pricing" },
       { name: "International Tax Advisory", path: "/services/tax/international-tax" },
     ],
   },
@@ -35,6 +32,7 @@ const services = [
   { name: "Corporate Finance", path: "/services/corporate-finance" },
   { name: "Private Capital Solutions", path: "/services/private-capital" },
   { name: "Sustainability & ESG", path: "/services/sustainability-esg" },
+  { name: "Specialist Hospitality Consulting", path: "/services/hospitality-consulting" },
 ];
 
 export default function ServicesLayout({ children }) {

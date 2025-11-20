@@ -1,0 +1,64 @@
+.servicescontainer {
+  display: flex;
+  justify-content: center;
+  padding: 0px 6vw;
+  font-family: "Inter", sans-serif;
+  background: linear-gradient(to right, #e9eff7, #fafafa);
+   color: #1e3b8a;
+   text-align: justify;
+
+}
+
+
+/* Titles */
+.servicestitle {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.servicessubtitle {
+  font-size: 1.5rem;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* Paragraphs */
+.servicesparagraph {
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #1a2b4c;
+}
+
+/* Services List */
+.servicesserviceList {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.servicesserviceItem {
+  padding: 12px 15px;
+  border-left: 4px solid #004595;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  font-weight: 500;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.servicesserviceItem:hover {
+  transform: translateX(4px);
+  background: #f5f7ff;
+}
+
+/* Make link take full item space */
+.servicesserviceItem a {
+  display: block;
+  color: #1a2b4c;
+  text-decoration: none;
+}
+
+.servicesserviceItem a:hover {
+  color: #004595;
+}

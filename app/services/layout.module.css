@@ -3,7 +3,7 @@
   min-height: 100vh;
   font-family: Arial, sans-serif;
   background-color: #F7F8FA;
- 
+  
 
 }
 
@@ -117,3 +117,4 @@
 .breadcrumbLink:hover {
   text-decoration: underline;
 }
+

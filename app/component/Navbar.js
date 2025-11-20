@@ -53,12 +53,13 @@ function Navbar() {
           {servicesHover && (
             <div className={styles.dropdownMenu}>
               <a href="/services/assurance">Assurance</a>
-              <a href="#">Tax</a>
-              <a href="#">Advisory</a>
-              <a href="#">Business Solutions</a>
-              <a href="#">Corporate Finance</a>
-              <a href="#">Private Capital Solutions</a>
-              <a href="#">Sustainability & ESG</a>
+              <a href="/services/tax">Tax</a>
+              <a href="/services/advisory">Advisory</a>
+              <a href="/services/business-solutions">Business Solutions</a>
+              <a href="/services/corporate-finance">Corporate Finance</a>
+              <a href="/services/private-capital">Private Capital Solutions</a>
+              <a href="/services/sustainability-esg">Sustainability & ESG</a>
+              <a href="/services/hospitality-consulting">Specialist Hospitality Consulting</a>
             </div>
           )}
         </div>
@@ -93,13 +94,14 @@ function Navbar() {
             <span>Services</span>
           </div>
           <div className={styles.subMenuContent}>
-            <div><a>Assurance</a></div>
-            <div><a>Tax</a></div>
-            <div><a>Advisory</a></div>
-            <div><a>Business Solutions</a></div>
-            <div><a>Corporate Finance</a></div>
-            <div><a>Private Capital Solutions</a></div>
-            <div><a>Sustainability & ESG</a></div>
+            <div><a href="/services/assurance">Assurance</a></div>
+            <div><a href="/services/tax">Tax</a></div>
+            <div><a href="/services/advisory">Advisory</a></div>
+            <div><a href="/services/business-solutions">Business Solutions</a></div>
+            <div><a href="/services/corporate-finance">Corporate Finance</a></div>
+            <div><a href="/services/private-capital">Private Capital Solutions</a></div>
+            <div><a href="/services/sustainability-esg">Sustainability & ESG</a></div>
+            <div><a href="/services/hospitality-consulting">Specialist Hospitality Consulting</a></div>
           </div>
         </div>
         

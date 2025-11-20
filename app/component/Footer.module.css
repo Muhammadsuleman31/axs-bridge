@@ -107,6 +107,23 @@
 
 
 
+.sectionlinks a,
+.talk a,
+.arrowLink {
+  text-decoration: none; /* remove underline */
+  color: inherit; /* inherit color from parent */
+  cursor: pointer; /* ensure pointer cursor */
+}
+
+
+.talkwrapper a{
+   text-decoration: none; /* remove underline */
+  color: inherit; /* inherit color from parent */
+  cursor: pointer; /* ensure pointer cursor */
+}
+
+
+
 .talk{
     cursor: pointer;
 }
