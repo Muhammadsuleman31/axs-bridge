@@ -3,15 +3,14 @@
   min-height: 100vh;
   font-family: Arial, sans-serif;
   background-color: #F7F8FA;
-  
-
+  padding-bottom: 100px;
 }
 
 .sidebar {
   width: 300px;
- position: sticky;
- top: 80px;
- align-self: flex-start;
+  position: sticky;
+  top: 80px;
+  align-self: flex-start;
   padding-top: 20px;
 }
 
@@ -19,10 +18,9 @@
   display: block;
   padding: 10px 30px;
   margin-bottom: 4px;
-   color: #1a2b4c;
+  color: #1a2b4c;
   text-decoration: none;
   position: relative;
-  
 }
 
 .link:hover {
@@ -30,24 +28,17 @@
   color: #002f6c;
 }
 
-
-.sidebar a {
-  position: relative;
-  text-decoration: none;
-}
-
 .sidebar a::before {
   content: "";
   position: absolute;
   left: 50%;
   bottom: -2px;
-  transform: translateX(-50%); /* centers the line */
+  transform: translateX(-50%);
   width: 90%;
   height: 0.1px;
   background: #00459515;
 }
 
-/* Underline effect */
 .sidebar a::after {
   content: "";
   position: absolute;
@@ -59,25 +50,21 @@
   transition: width 0.3s ease;
 }
 
-/* Hover underline */
 .sidebar a:hover::after {
   width: 100%;
 }
 
-/* Active link style */
 .sidebar a.active {
   background: #f2f7ff;
   color: #002f6c;
 }
 
-/* Active underline */
 .sidebar a.active::after {
   width: 100%;
 }
 
 .subservices {
   margin-left: 30px;
- 
   margin-bottom: 10px;
 }
 
@@ -89,7 +76,6 @@
   font-size: 0.95em;
   text-decoration: none;
   color: #333;
-  
 }
 
 .subLink:hover {
@@ -98,10 +84,9 @@
 
 .content {
   flex: 1;
- background: linear-gradient(to right, #e9eff7, #fafafa);
+  background: linear-gradient(to right, #e9eff7, #fafafa);
 }
 
-/* Breadcrumb styles */
 .breadcrumb {
   padding-left: 20px;
   margin-bottom: 20px;
@@ -110,7 +95,7 @@
 }
 
 .breadcrumbLink {
-    color: #002f6c;
+  color: #002f6c;
   text-decoration: none;
 }
 
@@ -118,3 +103,71 @@
   text-decoration: underline;
 }
 
+/* Bookmark tab with arrow animation */
+.bookmarkTab {
+  display: none;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid white;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(5px);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 75px;
+    left: -260px;
+    width: 260px;
+    height: 100vh;
+    background: #fff;
+    overflow-y: auto;
+    transition: none;
+    z-index: 1000;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .bookmarkTab {
+    display: flex;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    width: 25px;
+    height: 80px;
+    background: #003a80;
+    border-radius: 0 10px 10px 0;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+    z-index: 1100;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.25);
+    user-select: none;
+    transition: none;
+  }
+
+
+  .bookmarkTab:active {
+    cursor: grabbing;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}

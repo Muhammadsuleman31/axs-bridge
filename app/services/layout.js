@@ -1,6 +1,8 @@
-"use client"
+"use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useRef, useState } from "react";
 import styles from "./layout.module.css";
 
 const services = [
@@ -38,39 +40,66 @@ const services = [
 export default function ServicesLayout({ children }) {
   const pathname = usePathname();
 
-  // Build breadcrumb array
-  const pathSegments = pathname.split("/").filter(Boolean); // remove empty
-  const breadcrumbs = [{ name: "Home", path: "/" }];
+  const [drawerX, setDrawerX] = useState(0);
+  const dragStartX = useRef(null);
+  const dragging = useRef(false);
 
-  if (pathSegments[0] === "services") {
-    breadcrumbs.push({ name: "Services", path: "/services" });
+  const handleDragStart = (e) => {
+    dragging.current = true;
+    dragStartX.current = e.clientX;
+  };
 
-    if (pathSegments[1]) {
-      const mainService = services.find((s) => s.path.endsWith(pathSegments[1]));
-      if (mainService) breadcrumbs.push({ name: mainService.name, path: mainService.path });
+  const handleDragMove = (e) => {
+    if (!dragging.current) return;
+    const delta = e.clientX - dragStartX.current;
+    const newPos = Math.min(260, Math.max(0, delta));
+    setDrawerX(newPos);
+  };
 
-      if (pathSegments[2] && mainService?.subservices) {
-        const subService = mainService.subservices.find((s) =>
-          s.path.endsWith(pathSegments[2])
-        );
-        if (subService) breadcrumbs.push({ name: subService.name, path: subService.path });
-      }
-    }
-  }
+  const handleDragEnd = () => {
+    dragging.current = false;
+    setDrawerX(drawerX > 120 ? 260 : 0);
+  };
+
+  const touchStart = (e) => handleDragStart(e.touches[0]);
+  const touchMove = (e) => handleDragMove(e.touches[0]);
+  const touchEnd = () => handleDragEnd();
 
   return (
-    <div className={styles.container}>
-      <aside className={styles.sidebar}>
+    <div
+      className={styles.container}
+      onMouseMove={handleDragMove}
+      onMouseUp={handleDragEnd}
+      onMouseLeave={handleDragEnd}
+      onTouchMove={touchMove}
+      onTouchEnd={touchEnd}
+    >
+      {/* Animated Bookmark Tab */}
+      <div
+        className={styles.bookmarkTab}
+        style={{ transform: `translateX(${drawerX}px)` }}
+        onMouseDown={handleDragStart}
+        onTouchStart={touchStart}
+      >
+        <div className={styles.arrow}></div>
+      </div>
+
+      {/* Sidebar */}
+      <aside className={styles.sidebar} style={{ transform: `translateX(${drawerX}px)` }}>
         {services.map((service) => (
           <div key={service.path}>
             <Link
               href={service.path}
               className={
-                pathname.startsWith(service.path) ? `${styles.link} ${styles.active}` : styles.link
+                pathname.startsWith(service.path)
+                  ? `${styles.link} ${styles.active}`
+                  : styles.link
               }
+              onClick={() => setDrawerX(0)}
             >
               {service.name}
             </Link>
+
             {service.subservices && pathname.startsWith(service.path) && (
               <div className={styles.subservices}>
                 {service.subservices.map((sub) => (
@@ -82,6 +111,7 @@ export default function ServicesLayout({ children }) {
                         ? `${styles.subLink} ${styles.active}`
                         : styles.subLink
                     }
+                    onClick={() => setDrawerX(0)}
                   >
                     {sub.name}
                   </Link>
@@ -92,22 +122,7 @@ export default function ServicesLayout({ children }) {
         ))}
       </aside>
 
-      <main className={styles.content}>
-        {/* Breadcrumb */}
-        <nav className={styles.breadcrumb}>
-          {breadcrumbs.map((crumb, index) => (
-            <span key={crumb.path}>
-              <Link href={crumb.path} className={styles.breadcrumbLink}>
-                {crumb.name}
-              </Link>
-              {index < breadcrumbs.length - 1 && " / "}
-            </span>
-          ))}
-        </nav>
-
-        {/* Page content */}
-        {children}
-      </main>
+      <main className={styles.content}>{children}</main>
     </div>
   );
 }

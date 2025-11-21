@@ -11,12 +11,12 @@ export default function ServicesPage() {
     {
       title: "Tax",
       subservices: [
-        { title: "Local Tax", url: "/services/tax/local" },
-        { title: "Corporate Tax Compliance", url: "/services/tax/corporate" },
-        { title: "VAT GST Custom and Excise", url: "/services/tax/vat" },
+        { title: "Local Tax", url: "/services/tax/local-tax" },
+        { title: "Corporate Tax Compliance", url: "/services/tax/corporate-tax-compliance" },
+        { title: "VAT GST Custom and Excise", url: "/services/tax/vat-gst-custom&excise" },
         { title: "Tax Structuring", url: "/services/tax/structuring" },
         { title: "Transfer Pricing Services", url: "/services/tax/transfer-pricing" },
-        { title: "International Tax Advisory", url: "/services/tax/international" },
+        { title: "International Tax Advisory", url: "/services/tax/international-tax" },
       ],
       url: "/services/tax",
     },

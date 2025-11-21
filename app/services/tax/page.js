@@ -6,8 +6,8 @@ export default function TaxPage() {
   const taxServices = [
     { name: "Local Tax", url: "/services/tax/local-tax" },
     { name: "Corporate Tax Compliance", url: "/services/tax/corporate-tax-compliance" },
-    { name: "VAT GST Customs and Excise", url: "/services/tax/vat-gst-customs-excise" },
-    { name: "Tax Structuring", url: "/services/tax/tax-structuring" },
+    { name: "VAT GST Customs and Excise", url: "/services/tax/vat-gst-custom&excise" },
+    { name: "Tax Structuring", url: "/services/tax/structuring" },
     { name: "Transfer Pricing Services", url: "/services/tax/transfer-pricing" },
     { name: "International Tax", url: "/services/tax/international-tax" }
   ];
