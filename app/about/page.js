@@ -45,7 +45,7 @@ function About() {
         </p>
 
         <p className={styles.fadeInUp}>
-          At AxS Bridge, we focus on understanding your ambitions and delivering
+          At AXS Bridge, we focus on understanding your ambitions and delivering
           solutions that help you move forward with clarity and confidence.
         </p>
       </div>
