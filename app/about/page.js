@@ -8,7 +8,7 @@ function About() {
         <h1 className={`${styles.gradientText} ${styles.fadeInUp}`}>About Us</h1>
 
         <p className={styles.fadeInUp}>
-          AxS Bridge is part of a globally connected network of professionals
+          AXS Bridge is part of a globally connected network of professionals
           united by a shared commitment to quality, consistency, and
           client-focused service. Our brand reflects a common understanding of
           how we work, what we value, and the standards we uphold across borders.
