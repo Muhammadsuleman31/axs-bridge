@@ -167,7 +167,7 @@ background-color: #fafafa;
   display: flex;
   justify-content: center;
   padding: 0px 6vw;
-  padding-bottom: 100px;
+  padding-bottom: 8vh;
   font-family: "Inter", sans-serif;
   background: linear-gradient(to right, #e9eff7, #fafafa);
   color: #1e3b8a;
@@ -285,6 +285,15 @@ background-color: #fafafa;
 
 .servicesserviceItem a:hover {
   color: #004595;
+}
+
+@media (max-width: 468px) {
+
+
+.servicescontainer {
+  padding-bottom: 2vh;
+}
+
 }
 
 
