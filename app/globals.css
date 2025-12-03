@@ -166,7 +166,8 @@ background-color: #fafafa;
 .servicescontainer {
   display: flex;
   justify-content: center;
-  padding: 0px 6vw;
+  padding: 0px 4.5vw;
+    padding-top: 4vh; 
   padding-bottom: 8vh;
   font-family: "Inter", sans-serif;
   background: linear-gradient(to right, #e9eff7, #fafafa);
@@ -291,6 +292,9 @@ background-color: #fafafa;
 
 
 .servicescontainer {
+
+    padding: 0px 4vw;
+    padding-top: 1vh; 
   padding-bottom: 2vh;
 }
 

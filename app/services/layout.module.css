@@ -10,7 +10,7 @@
   position: sticky;
   top: 80px;
   align-self: flex-start;
-  padding-top: 20px;
+  padding-top: 2px;
   margin-left: auto; /* Move sidebar to the right on desktop */
 }
 
