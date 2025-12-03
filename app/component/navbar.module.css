@@ -326,5 +326,16 @@ body.menu-open {
 
     .navbar{
       padding: 0 6vw;
+      height: 60px;
+ 
     }
+    
+.navbarLeft img {
+  height: 40px;
+}
+
+.hamburger {
+  font-size: 23px;
+}
+
   }

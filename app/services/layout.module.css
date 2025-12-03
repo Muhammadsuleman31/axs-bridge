@@ -148,7 +148,7 @@
   .bookmarkTab {
     display: flex;
     position: fixed;
-    top: 9%;
+    top: 62px;
     right: 0;
     width: 20px;
     height: 80px;
@@ -170,4 +170,10 @@
   .content {
     padding: 10px;
   }
+}
+
+@media (max-width: 468px) {
+.sidebar {
+  top: 60px;
+}
 }

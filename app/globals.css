@@ -289,3 +289,11 @@ background-color: #fafafa;
 
 
 /* services page -----------------------------------------------------*/
+
+
+@media (max-width: 468px) {
+
+body{
+  margin-top: 60px;
+}
+}
