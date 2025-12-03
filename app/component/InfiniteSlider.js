@@ -20,59 +20,11 @@ function FiniteSlider() {
   const sliderRef = useRef(null);
   const trackRef = useRef(null);
 
-  // --------------------- TOUCH SWIPE ---------------------
-  const touchStartX = useRef(0);
-  const touchEndX = useRef(0);
-
-  const handleTouchStart = (e) => {
-    touchStartX.current = e.changedTouches[0].clientX;
-  };
-
-  const handleTouchMove = (e) => {
-    touchEndX.current = e.changedTouches[0].clientX;
-  };
-
-  const handleTouchEnd = () => {
-    const diff = touchStartX.current - touchEndX.current;
-
-    if (Math.abs(diff) > 40) {
-      if (diff > 0) slideNext(); 
-      else slidePrev();
-    }
-  };
-
-  // --------------------- MOUSE DRAG ---------------------
+  // Fix flags
   const isDragging = useRef(false);
   const dragStartX = useRef(0);
-  const dragEndX = useRef(0);
-
-  const handleMouseDown = (e) => {
-    isDragging.current = true;
-    dragStartX.current = e.clientX;
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging.current) return;
-    dragEndX.current = e.clientX;
-  };
-
-  const handleMouseUp = () => {
-    if (!isDragging.current) return;
-    isDragging.current = false;
-
-    const diff = dragStartX.current - dragEndX.current;
-
-    if (Math.abs(diff) > 40) {
-      if (diff > 0) slideNext();
-      else slidePrev();
-    }
-  };
-
-  const handleMouseLeave = () => {
-    if (isDragging.current) {
-      isDragging.current = false;
-    }
-  };
+  const dragDelta = useRef(0);
+  const clickBlocked = useRef(false);
 
   // --------------------- DIMENSIONS ---------------------
   useEffect(() => {
@@ -116,28 +68,82 @@ function FiniteSlider() {
     setCurrentIndex((prev) => Math.max(prev - 1, 0));
   };
 
-  const maxIndex = Math.ceil(slidesData.length - slidesPerView);
+  // --------------------- MOUSE EVENTS ---------------------
+  const handleMouseDown = (e) => {
+    isDragging.current = true;
+    dragStartX.current = e.clientX;
+    dragDelta.current = 0;
+    clickBlocked.current = false;
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging.current) return;
+
+    dragDelta.current = e.clientX - dragStartX.current;
+
+    // Start drag only if movement > 5px
+    if (Math.abs(dragDelta.current) > 5) {
+      clickBlocked.current = true;
+    }
+  };
+
+  const handleMouseUp = () => {
+    if (!isDragging.current) return;
+    isDragging.current = false;
+
+    // Only slide if movement > 40px
+    if (Math.abs(dragDelta.current) > 40) {
+      if (dragDelta.current < 0) slideNext();
+      else slidePrev();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    isDragging.current = false;
+  };
+
+  // --------------------- TOUCH EVENTS ---------------------
+  const touchStart = useRef(0);
+
+  const handleTouchStart = (e) => {
+    touchStart.current = e.touches[0].clientX;
+    dragDelta.current = 0;
+    clickBlocked.current = false;
+  };
+
+  const handleTouchMove = (e) => {
+    const delta = e.touches[0].clientX - touchStart.current;
+    dragDelta.current = delta;
+
+    if (Math.abs(delta) > 5) {
+      clickBlocked.current = true;
+      e.preventDefault();
+    }
+  };
+
+  const handleTouchEnd = () => {
+    if (Math.abs(dragDelta.current) > 40) {
+      if (dragDelta.current < 0) slideNext();
+      else slidePrev();
+    }
+  };
 
   return (
     <div className={styles.sliderContainer}>
-      <button
-        className={styles.arrow}
-        onClick={slidePrev}
-        disabled={currentIndex === 0}
-      >
+      <button className={styles.arrow} onClick={slidePrev} disabled={currentIndex === 0}>
         &#8249;
       </button>
 
       <div
         className={styles.sliderViewport}
         ref={sliderRef}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         <div
           className={styles.sliderTrack}
@@ -147,9 +153,26 @@ function FiniteSlider() {
           }}
         >
           {slidesData.map((slide) => (
-            <div className={styles.slide} key={slide.id}>
+            <div
+              className={styles.slide}
+              key={slide.id}
+              onClick={(e) => {
+                if (clickBlocked.current) {
+                  e.preventDefault();
+                  return;
+                }
+                window.location.href = slide.link;
+              }}
+            >
               <img src={slide.img} alt={slide.title} />
-              <a href={slide.link}>{slide.title}</a>
+              <a
+                href={slide.link}
+                onClick={(e) => {
+                  if (clickBlocked.current) e.preventDefault();
+                }}
+              >
+                {slide.title}
+              </a>
             </div>
           ))}
         </div>
@@ -158,7 +181,7 @@ function FiniteSlider() {
       <button
         className={styles.arrow}
         onClick={slideNext}
-        disabled={currentIndex >= maxIndex}
+        disabled={currentIndex >= Math.ceil(slidesData.length - slidesPerView)}
       >
         &#8250;
       </button>
