@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
 import InfiniteSlider from "./component/InfiniteSlider"
+import Link from "next/link";
+
 
 function HomePage() {
   return (
@@ -32,7 +34,11 @@ function HomePage() {
   <div className={styles.servies}>
     <div className={styles.servicesheading}>
       <div><h1>Services & Solutions</h1></div>
-      <div><button>More</button></div>
+    <div>
+  <Link href="/services">
+    <button>More</button>
+  </Link>
+</div>
     </div>
     <InfiniteSlider/>
   </div>

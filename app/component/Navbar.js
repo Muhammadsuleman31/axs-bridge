@@ -78,7 +78,9 @@ function Navbar() {
       {/* Mobile slide menu */}
       <div className={`${styles.slideMenu} ${menuOpen ? styles.open : ""}`}>
         <div className={styles.panelHeader}>
-          <img src="inverted.png" alt="PKF Logo" />
+        <div className={styles.navbarLeft}>
+        <img src="logo.png" alt="PKF Logo" />
+      </div>
         </div>
 
         <div className={styles.slideMenuContent}>
