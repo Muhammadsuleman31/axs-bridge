@@ -53,7 +53,7 @@ export default function ServicesLayout({ children }) {
     if (!dragging.current) return;
 
     const delta = e.clientX - dragStartX.current;
-    const newPos = Math.min(260, Math.max(0, -delta)); // reversed direction (pull from right)
+    const newPos = Math.min(260, Math.max(0, -delta)); // pull from right
     setDrawerX(newPos);
   };
 
@@ -65,6 +65,28 @@ export default function ServicesLayout({ children }) {
   const touchStart = (e) => handleDragStart(e.touches[0]);
   const touchMove = (e) => handleDragMove(e.touches[0]);
   const touchEnd = () => handleDragEnd();
+
+  // Build breadcrumb dynamically
+  const getBreadcrumb = () => {
+    const pathParts = pathname.split("/").filter(Boolean); // remove empty
+    const crumbs = [{ name: "Home", path: "/" }];
+    if (pathParts[0] === "services") {
+      crumbs.push({ name: "Services", path: "/services" });
+      if (pathParts.length > 1) {
+        const mainService = services.find(s => s.path.endsWith(pathParts[1]));
+        if (mainService) {
+          crumbs.push({ name: mainService.name, path: mainService.path });
+          if (pathParts.length > 2 && mainService.subservices) {
+            const sub = mainService.subservices.find(sub => sub.path.endsWith(pathParts[2]));
+            if (sub) crumbs.push({ name: sub.name, path: sub.path });
+          }
+        }
+      }
+    }
+    return crumbs;
+  };
+
+  const breadcrumbs = getBreadcrumb();
 
   return (
     <div
@@ -78,7 +100,7 @@ export default function ServicesLayout({ children }) {
       {/* Animated Bookmark Tab */}
       <div
         className={styles.bookmarkTab}
-        style={{ transform: `translateX(${-drawerX}px)` }} // right-side movement
+        style={{ transform: `translateX(${-drawerX}px)` }}
         onMouseDown={handleDragStart}
         onTouchStart={touchStart}
       >
@@ -126,7 +148,25 @@ export default function ServicesLayout({ children }) {
         ))}
       </aside>
 
-      <main className={styles.content}>{children}</main>
+      <main className={styles.content}>
+        {/* Breadcrumb */}
+        <div className={styles.breadcrumb}>
+          {breadcrumbs.map((crumb, index) => (
+            <span key={crumb.path}>
+              {index > 0 && " > "}
+              {index < breadcrumbs.length - 1 ? (
+                <Link href={crumb.path} className={styles.breadcrumbLink}>
+                  {crumb.name}
+                </Link>
+              ) : (
+                <span>{crumb.name}</span>
+              )}
+            </span>
+          ))}
+        </div>
+
+        {children}
+      </main>
     </div>
   );
 }

@@ -91,9 +91,8 @@
 
 .breadcrumb {
   padding-left: 20px;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  font-size: 0.9em;
+  margin-top: 25px;
+  font-size: 0.95em;
 }
 
 .breadcrumbLink {
@@ -177,4 +176,7 @@
   .sidebar {
     top: 60px;
   }
+  .breadcrumb {
+    margin-top: 15px;
+}
 }
