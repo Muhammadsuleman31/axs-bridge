@@ -51,8 +51,9 @@ export default function ServicesLayout({ children }) {
 
   const handleDragMove = (e) => {
     if (!dragging.current) return;
+
     const delta = e.clientX - dragStartX.current;
-    const newPos = Math.min(260, Math.max(0, delta));
+    const newPos = Math.min(260, Math.max(0, -delta)); // reversed direction (pull from right)
     setDrawerX(newPos);
   };
 
@@ -77,7 +78,7 @@ export default function ServicesLayout({ children }) {
       {/* Animated Bookmark Tab */}
       <div
         className={styles.bookmarkTab}
-        style={{ transform: `translateX(${drawerX}px)` }}
+        style={{ transform: `translateX(${-drawerX}px)` }} // right-side movement
         onMouseDown={handleDragStart}
         onTouchStart={touchStart}
       >
@@ -85,7 +86,10 @@ export default function ServicesLayout({ children }) {
       </div>
 
       {/* Sidebar */}
-      <aside className={styles.sidebar} style={{ transform: `translateX(${drawerX}px)` }}>
+      <aside
+        className={styles.sidebar}
+        style={{ transform: `translateX(${-drawerX}px)` }}
+      >
         {services.map((service) => (
           <div key={service.path}>
             <Link

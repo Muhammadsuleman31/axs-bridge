@@ -82,9 +82,9 @@ function Navbar() {
         </div>
 
         <div className={styles.slideMenuContent}>
-          <a href="#">Home<FaChevronRight /></a>
+          <a href="/">Home<FaChevronRight /></a>
           <a onClick={() => setSubMenuOpen(true)}>Services <FaChevronRight /></a>
-          <a href="#">About Us<FaChevronRight /></a>
+          <a href="/about">About Us<FaChevronRight /></a>
         </div>
 
         {/* Submenu */}
