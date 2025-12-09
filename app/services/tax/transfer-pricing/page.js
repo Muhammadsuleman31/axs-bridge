@@ -5,10 +5,10 @@ export default function TransferPricingPage() {
   return (
     <div className="servicescontainer">
       <main className="content">
-        <h1 className="servicestitle">AxS Bridge Transfer Pricing Services</h1>
+        <h1 className="servicestitle">AXS Bridge Transfer Pricing Services</h1>
 
         <p className="servicesparagraph">
-          AxS Bridge offers a comprehensive suite of transfer pricing solutions designed to ensure compliance, enhance efficiency, and manage risk across jurisdictions.
+          AXS Bridge offers a comprehensive suite of transfer pricing solutions designed to ensure compliance, enhance efficiency, and manage risk across jurisdictions.
         </p>
 
         <h2 className="servicessubtitle">Compliance Services</h2>

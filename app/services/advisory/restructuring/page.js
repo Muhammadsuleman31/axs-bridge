@@ -15,7 +15,7 @@ export default function RestructuringPage() {
         <h1 className="servicestitle">Restructuring and Recovery Advisory</h1>
 
         <p className="servicesparagraph">
-          AxS Bridge provides strategic restructuring services to companies, shareholders, lenders, and creditors facing financial stress or operational disruption. 
+          AXS Bridge provides strategic restructuring services to companies, shareholders, lenders, and creditors facing financial stress or operational disruption. 
           Our goal is to stabilize businesses, preserve value, and guide stakeholders toward the most viable outcomes.
         </p>
 

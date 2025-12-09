@@ -25,7 +25,7 @@ export default function PrivateCapitalPage() {
         <h1 className="servicestitle">Private Capital Solutions</h1>
 
         <p className="servicesparagraph">
-          AxS Bridge offers tailored advisory services to clients operating across the private capital landscape. Our team brings deep industry experience and global insight, delivering practical solutions that support investment performance and operational excellence.
+          AXS Bridge offers tailored advisory services to clients operating across the private capital landscape. Our team brings deep industry experience and global insight, delivering practical solutions that support investment performance and operational excellence.
         </p>
 
         <p className="servicesparagraph">
@@ -72,7 +72,7 @@ export default function PrivateCapitalPage() {
         <h2 className="servicessubtitle">Our Approach and Results</h2>
 
         <p className="servicesparagraph">
-          At AxS Bridge, we begin by deeply understanding each client’s unique challenges and objectives. By leveraging our global network and multidisciplinary expertise, we deliver practical, tailored solutions that align with their strategic goals.
+          At AXS Bridge, we begin by deeply understanding each client’s unique challenges and objectives. By leveraging our global network and multidisciplinary expertise, we deliver practical, tailored solutions that align with their strategic goals.
         </p>
 
         <p className="servicesparagraph">

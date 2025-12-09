@@ -5,10 +5,10 @@ export default function CorporateFinancePage() {
   return (
     <div className="servicescontainer">
       <main className="servicescontent">
-        <h1 className="servicestitle">Corporate Finance Advisory</h1>
+        <h1 className="servicestitle">Corporate finance advisory</h1>
 
         <p className="servicesparagraph">
-          AxS Bridge supports clients in evaluating and executing strategic transactions that drive growth, unlock value, and enable international expansion. Whether you are an acquirer, vendor, or financial sponsor, we offer a comprehensive suite of corporate finance services designed to guide you through every stage of the deal process.
+          AXS Bridge supports clients in evaluating and executing strategic transactions that drive growth, unlock value, and enable international expansion. Whether you are an acquirer, vendor, or financial sponsor, we offer a comprehensive suite of corporate finance services designed to guide you through every stage of the deal process.
         </p>
 
         <h2 className="servicessubtitle">Transaction Support and M&A Advisory</h2>
@@ -39,7 +39,7 @@ export default function CorporateFinancePage() {
 
         <h2 className="servicessubtitle">Capital Markets Advisory</h2>
         <p className="servicesparagraph">
-          AxS Bridge offers guidance for companies preparing to list or already listed on international exchanges including LSE, AIM, NASDAQ, ASX, PSX and TSX. We support businesses through the IPO journey and beyond, acting as reporting accountants and providing ongoing audit, accounting, and tax advisory services. Our advice is pragmatic, tailored, and aligned with your stage of growth.
+          AXS Bridge offers guidance for companies preparing to list or already listed on international exchanges including LSE, AIM, NASDAQ, ASX, PSX and TSX. We support businesses through the IPO journey and beyond, acting as reporting accountants and providing ongoing audit, accounting, and tax advisory services. Our advice is pragmatic, tailored, and aligned with your stage of growth.
         </p>
       </main>
     </div>

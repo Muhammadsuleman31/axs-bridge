@@ -26,7 +26,7 @@ export default function BusinessSolutionsPage() {
       <main className="servicescontent">
         <h1 className="servicestitle">Business Solutions</h1>
         <p className="servicesparagraph">
-          AxS Bridge offers flexible, scalable business support designed to help you manage operations more efficiently and make informed decisions with confidence. 
+          AXS Bridge offers flexible, scalable business support designed to help you manage operations more efficiently and make informed decisions with confidence. 
           Whether you need targeted assistance in areas like payroll or broader support with financial reporting and forecasting, we deliver practical solutions tailored to your needs.
         </p>
         <p className="servicesparagraph">

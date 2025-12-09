@@ -8,7 +8,7 @@ export default function InternationalTaxPage() {
         <h1 className="servicestitle">International Tax</h1>
 
         <p className="servicesparagraph">
-          AxS Bridge provides strategic international tax solutions to help businesses navigate cross-border complexities with confidence. Whether you need targeted advice or a coordinated global approach, we offer flexible support tailored to your needs.
+          AXS Bridge provides strategic international tax solutions to help businesses navigate cross-border complexities with confidence. Whether you need targeted advice or a coordinated global approach, we offer flexible support tailored to your needs.
         </p>
 
         <h2 className="servicessubtitle">Our Services Include</h2>
@@ -34,7 +34,7 @@ export default function InternationalTaxPage() {
         </p>
 
         <p className="servicesparagraph">
-          Let’s explore how AxS Bridge can support your overseas operations and help you build a tax strategy that scales with your ambitions. We welcome your questions and look forward to collaborating.
+          Let’s explore how AXS Bridge can support your overseas operations and help you build a tax strategy that scales with your ambitions. We welcome your questions and look forward to collaborating.
         </p>
       </main>
     </div>

@@ -16,7 +16,7 @@ export default function FinancialPlanningPage() {
         <h1 className="servicestitle">Financial Planning</h1>
 
         <p className="servicesparagraph">
-          You work hard for your money — it should work just as hard for you. At AxS Bridge, financial planning 
+          You work hard for your money — it should work just as hard for you. At AXS Bridge, financial planning 
           is about aligning your wealth strategy with your lifestyle, long-term goals, and risk profile. 
           We take the time to understand your unique circumstances and deliver advice that helps you make 
           the most of your financial potential.

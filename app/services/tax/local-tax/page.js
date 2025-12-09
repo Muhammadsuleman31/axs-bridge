@@ -9,7 +9,7 @@ export default function LocalTaxPage() {
         <h1 className="servicestitle">Local Tax</h1>
 
         <p className="servicesparagraph">
-          AxS Bridge offers expert guidance and compliance support across mainstream taxes corporate, income, VAT/GST and the unique local levies specific to each jurisdiction.
+          AXS Bridge offers expert guidance and compliance support across mainstream taxes corporate, income, VAT/GST and the unique local levies specific to each jurisdiction.
         </p>
 
         <p className="servicesparagraph">
@@ -17,7 +17,7 @@ export default function LocalTaxPage() {
         </p>
 
         <p className="servicesparagraph">
-          Our team is ready to help you understand the full spectrum of applicable taxes and identify strategies to optimize your tax position. Reach out to explore how AxS Bridge can support your business across borders.
+          Our team is ready to help you understand the full spectrum of applicable taxes and identify strategies to optimize your tax position. Reach out to explore how AXS Bridge can support your business across borders.
         </p>
 
       </main>

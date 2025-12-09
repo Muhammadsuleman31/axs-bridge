@@ -27,7 +27,7 @@ export default function ITConsultingPage() {
 
         <p className="servicesparagraph">
           Technology alone does not drive success. It must be applied strategically and effectively to deliver real business value. 
-          At AxS Bridge, we help you align technology with your goals, ensuring that your IT investments are practical, cost-effective, 
+          At AXS Bridge, we help you align technology with your goals, ensuring that your IT investments are practical, cost-effective, 
           and tailored to your specific needs.
         </p>
 

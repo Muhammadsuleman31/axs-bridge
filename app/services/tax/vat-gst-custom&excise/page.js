@@ -14,7 +14,7 @@ export default function VATGSTCustomExcisePage() {
           In response to global fiscal pressures, many countries raised VAT and GST rates and despite economic recovery, these elevated rates remain. While indirect taxes are meant to be borne by consumers, businesses often face significant compliance burdens, cash flow challenges, and regulatory inconsistencies.
         </p>
         <p className="servicesparagraph">
-          At AxS Bridge, we help you navigate this complexity with clarity and precision.
+          At AXS Bridge, we help you navigate this complexity with clarity and precision.
         </p>
 
         <h2 className="servicessubtitle">Our Services Include:</h2>

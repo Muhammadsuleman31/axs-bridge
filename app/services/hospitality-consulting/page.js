@@ -22,7 +22,7 @@ export default function HospitalityPage() {
         <h1 className="servicestitle">Specialist Hospitality Consulting</h1>
 
         <p className="servicesparagraph">
-          AxS Bridge offers specialized consulting services to the global hotel and hospitality sector. Recognized for our commitment to quality and strategic insight, we support clients across the full spectrum of the industry from boutique operators to multinational investors and public institutions.
+          AXS Bridge offers specialized consulting services to the global hotel and hospitality sector. Recognized for our commitment to quality and strategic insight, we support clients across the full spectrum of the industry from boutique operators to multinational investors and public institutions.
         </p>
 
         <p className="servicesparagraph">

@@ -17,7 +17,7 @@ export default function TaxPage() {
       <main className="servicescontent">
         <h1 className="servicestitle">Tax</h1>
         <p className="servicesparagraph">
-          Tax law, regulation, and efficiency are complex, but at AxS Bridge, we simplify the journey. 
+          Tax law, regulation, and efficiency are complex, but at AXS Bridge, we simplify the journey. 
           By staying ahead of evolving rules and developments, we provide clear, practical guidance that 
           empowers you to make confident, informed decisions. With global expertise, we can answer your 
           questions, explain your obligations, and help you plan effectively, whatever the size and needs 

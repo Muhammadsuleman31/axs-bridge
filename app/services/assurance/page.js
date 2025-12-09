@@ -14,7 +14,7 @@ export default function AssurancePage() {
       <main className="servicescontent">
         <h1 className="servicestitle">Assurance</h1>
         <p className="servicesparagraph">
-          How can we help you? Assurance services are at the heart of what AxS Bridge do.
+          How can we help you? Assurance services are at the heart of what AXS Bridge do.
           As a global service provider, we ensure that all your assurance needs are met
           wherever you are located.
         </p>
@@ -32,7 +32,7 @@ export default function AssurancePage() {
             <div className="servicesdropdownContent">
               <h4 className="servicessubtitle">External/Statutory</h4>
               <p className="servicesparagraph">
-                AxS Bridge methodology uses data analysis and technology to provide
+                AXS Bridge methodology uses data analysis and technology to provide
                 assurance on your results and assist with regulatory requirements
                 efficiently.
               </p>
@@ -86,13 +86,13 @@ export default function AssurancePage() {
           )}
         </div>
 
-        <h2 className="servicestitle">Why AxS Bridge?</h2>
+        <h2 className="servicestitle">Why AXS Bridge?</h2>
         <p className="servicesparagraph">
           In today’s fast-paced environment, decision-makers need timely, reliable insights from trusted advisors.
           You need confidence in your systems, controls, and financial records and the ability to inspire that same trust in your stakeholders.
         </p>
 
-        <h2 className="servicestitle">What Sets AxS Bridge Apart</h2>
+        <h2 className="servicestitle">What Sets AXS Bridge Apart</h2>
         <ul className="servicesserviceList">
           <li className="servicesserviceItem">
             <strong>Clear, Confident Communication.</strong> We combine innovation with a tech-enabled, risk-based assurance approach delivering results that are transparent, actionable, and trustworthy.
@@ -101,10 +101,10 @@ export default function AssurancePage() {
             <strong>People. Passion. Performance.</strong> Our team is deeply committed to your success, offering efficient, end-to-end solutions with direct partner involvement and long-term relationships.
           </li>
           <li className="servicesserviceItem">
-            <strong>Global Perspective, Focused Delivery.</strong> AxS Bridge brings international expertise and a globally informed approach to every engagement. We collaborate across borders, leverage deep technical insight, and deliver assurance solutions that meet global standards no matter where you're based.
+            <strong>Global Perspective, Focused Delivery.</strong> AXS Bridge brings international expertise and a globally informed approach to every engagement. We collaborate across borders, leverage deep technical insight, and deliver assurance solutions that meet global standards no matter where you're based.
           </li>
           <li className="servicesserviceItem">
-            <strong>Tailored for You.</strong> From startups and nonprofits to listed companies and government bodies, AxS Bridge brings the right expertise to meet your unique needs.
+            <strong>Tailored for You.</strong> From startups and nonprofits to listed companies and government bodies, AXS Bridge brings the right expertise to meet your unique needs.
           </li>
         </ul>
       </main>

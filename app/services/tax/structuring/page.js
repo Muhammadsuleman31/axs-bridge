@@ -8,7 +8,7 @@ export default function TaxStructuringPage() {
         <h1 className="servicestitle">Tax Structuring</h1>
 
         <p className="servicesparagraph">
-          As global tax frameworks evolve, driven by OECD’s BEPS (Base Erosion and Profit Shifting) recommendations, businesses face increasing scrutiny over hybrid arrangements, intercompany payments, and treaty-based structures. At AxS Bridge, we help you stay ahead of these changes with smart, compliant tax strategies.
+          As global tax frameworks evolve, driven by OECD’s BEPS (Base Erosion and Profit Shifting) recommendations, businesses face increasing scrutiny over hybrid arrangements, intercompany payments, and treaty-based structures. At AXS Bridge, we help you stay ahead of these changes with smart, compliant tax strategies.
         </p>
 
         <h2 className="servicessubtitle">Cross-Border Tax Structuring Services Include</h2>

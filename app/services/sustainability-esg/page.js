@@ -51,7 +51,7 @@ export default function SustainabilityPage() {
         <h1 className="servicestitle">Sustainability & ESG</h1>
 
         <p className="servicesparagraph">
-          AxS Bridge offers a comprehensive suite of consulting services across four core areas: Strategy, Risk and Compliance, Sustainability, and Assurance, designed to help organizations navigate complexity, improve performance, and meet evolving regulatory and stakeholder expectations.
+          AXS Bridge offers a comprehensive suite of consulting services across four core areas: Strategy, Risk and Compliance, Sustainability, and Assurance, designed to help organizations navigate complexity, improve performance, and meet evolving regulatory and stakeholder expectations.
         </p>
 
         {services.map((service, index) => (

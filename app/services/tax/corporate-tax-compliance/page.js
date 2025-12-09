@@ -8,7 +8,7 @@ export default function CorporateTaxCompliancePage() {
         <h1 className="servicestitle">Corporate Tax Compliance</h1>
 
         <p className="servicesparagraph">
-          Staying compliant with corporate tax obligations is increasingly complex especially in jurisdictions where legislation, regulations, and tax authority practices evolve rapidly. AxS Bridge helps you navigate this landscape with clarity and confidence.
+          Staying compliant with corporate tax obligations is increasingly complex especially in jurisdictions where legislation, regulations, and tax authority practices evolve rapidly. AXS Bridge helps you navigate this landscape with clarity and confidence.
         </p>
 
         <p className="servicesparagraph">
@@ -34,7 +34,7 @@ export default function CorporateTaxCompliancePage() {
         </p>
 
         <p className="servicesparagraph">
-          Let’s explore how AxS Bridge can help your business reduce costs, stay compliant, and plan tax more effectively. Reach out to start the conversation. Click here
+          Let’s explore how AXS Bridge can help your business reduce costs, stay compliant, and plan tax more effectively. Reach out to start the conversation. Click here
         </p>
       </main>
     </div>
