@@ -1,6 +1,7 @@
 .wrapper {
-  
-  padding: 5vw 4vw;
+  width: 100%;
+  min-height: 100vh;
+  padding: 8vw 4vw;
   background: linear-gradient(90deg, #1e3b8c, #395cbd);
   display: flex;
   justify-content: center;
@@ -10,12 +11,11 @@
 .card {
   width: 100%;
   max-width: 650px;
-  padding: 20px 50px;
-  background: rgba(255, 255, 255, 0.75);
+  padding: 50px;
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 18px;
-  box-shadow: 0 8px 25px rgba(0, 69, 149, 0.18);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 69, 149, 0.15);
   color: #1e3a8a;
   text-align: center;
 }
@@ -42,17 +42,49 @@
 .form textarea {
   padding: 16px;
   font-size: 1rem;
-  border-radius: 10px;
+  border-radius: 12px;
   border: 1px solid #d0d8ef;
   outline: none;
   transition: 0.2s ease-in-out;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
+  box-sizing: border-box;
 }
 
 .form input:focus,
 .form textarea:focus {
   border-color: #1e3b8c;
-  box-shadow: 0 0 8px rgba(30, 59, 140, 0.2);
+  box-shadow: 0 0 10px rgba(30, 59, 140, 0.2);
+}
+
+.phoneInputWrapper {
+  width: 100%;
+}
+
+.phoneInputWrapper .react-tel-input .form-control {
+  height: 56px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 1px solid #d0d8ef;
+  background: rgba(255, 255, 255, 0.95);
+  padding-left: 60px;
+  box-sizing: border-box;
+  box-shadow: none;
+}
+
+.phoneInputWrapper .react-tel-input .flag-dropdown {
+  top: 0;
+  height: 56px;
+  border-radius: 12px 0 0 12px;
+  box-shadow: none;
+  background: transparent !important; /* Removed gray background behind flag */
+}
+
+.phoneInputWrapper .react-tel-input .selected-flag {
+  background: transparent !important; /* Removed gray background behind selected flag */
+  border-radius: 12px 0 0 12px;
+  height: 100%;
+  padding-left: 8px;
+  position: relative;
 }
 
 .form button {
@@ -61,7 +93,7 @@
   font-size: 1.1rem;
   padding: 16px;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   transition: 0.25s ease-in-out;
 }
@@ -105,9 +137,11 @@
   }
 
   .form input,
-  .form textarea {
+  .form textarea,
+  .phoneInputWrapper .react-tel-input .form-control {
     font-size: 0.95rem;
     padding: 14px;
+    height: 50px;
   }
 
   .form button {
