@@ -28,7 +28,7 @@ function Footer() {
   return (
     <>
     <div className={styles.talkwrapper}>
-      <a href="mailto:info@axsbridge.com">
+      <a href="/contact">
         <div className={styles.talk}>
           <div className="gradient-text"><h1>LET'S TALK</h1></div>
           <div className={styles.arrowContainer}>

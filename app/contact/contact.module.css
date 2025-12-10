@@ -1,0 +1,117 @@
+.wrapper {
+  
+  padding: 5vw 4vw;
+  background: linear-gradient(90deg, #1e3b8c, #395cbd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  max-width: 650px;
+  padding: 20px 50px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 69, 149, 0.18);
+  color: #1e3a8a;
+  text-align: center;
+}
+
+.card h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 900;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+  color: #4e7ebd;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form input,
+.form textarea {
+  padding: 16px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1px solid #d0d8ef;
+  outline: none;
+  transition: 0.2s ease-in-out;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #1e3b8c;
+  box-shadow: 0 0 8px rgba(30, 59, 140, 0.2);
+}
+
+.form button {
+  background: #1e3b8c;
+  color: #fafafa;
+  font-size: 1.1rem;
+  padding: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease-in-out;
+}
+
+.form button:hover {
+  background: #162c63;
+}
+
+.status {
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.altEmail {
+  margin-top: 25px;
+  font-size: 1rem;
+  color: #1e3a8a;
+}
+
+.altEmail a {
+  margin-left: 6px;
+  text-decoration: underline;
+  color: #1e3b8c;
+}
+
+/* ----------------------- */
+/*        RESPONSIVE       */
+/* ----------------------- */
+
+@media (max-width: 600px) {
+  .card {
+    padding: 35px 25px;
+  }
+
+  .card h1 {
+    font-size: 2.4rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .form input,
+  .form textarea {
+    font-size: 0.95rem;
+    padding: 14px;
+  }
+
+  .form button {
+    font-size: 1rem;
+    padding: 14px;
+  }
+}
