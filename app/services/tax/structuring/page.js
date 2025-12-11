@@ -48,7 +48,7 @@ export default function TaxStructuringPage() {
     <strong>Foreign Tax Compliance.</strong> Managing your international tax obligations with precision from return preparation and assessments to handling tax authority queries and correspondence.
   </li>
 </ul>
-      </main>
+    </main>
     </div>
   );
 }
