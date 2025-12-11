@@ -171,6 +171,7 @@ background-color: #fafafa;
 }
 
 .servicesNestedList {
+  
   list-style: disc;
   padding-left: 20px;
   margin-top: 5px;
@@ -260,10 +261,11 @@ background-color: #fafafa;
 
 .servicesserviceItem {
   padding: 12px 15px;
+    /* color: #1a2b4c !important;
+      background: linear-gradient(to left, #e9eff7, #fafafa); */
   border-left: 4px solid #004595;
-  background: #fff;
+background-color: #fff;
   box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  font-weight: 500;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
