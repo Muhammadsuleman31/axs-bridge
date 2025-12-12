@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import styles from './private.module.css' // Import the new module CSS
 
 export default function PrivateCapitalPage() {
   const coreAdvisory = [
@@ -21,7 +22,8 @@ export default function PrivateCapitalPage() {
 
   return (
     <div className="servicescontainer">
-      <main className="servicescontent">
+      {/* Content Wrapper to constrain max width and center content */}
+      <main className={styles.contentWrapper}> 
         <h1 className="servicestitle">Private Capital Solutions</h1>
 
         <p className="servicesparagraph">
@@ -36,32 +38,49 @@ export default function PrivateCapitalPage() {
           Our approach combines international reach with personalized, cost-effective service—ensuring that each engagement is led by professionals with the right expertise and sector knowledge.
         </p>
 
+        {/* Who We Serve Section */}
         <h2 className="servicessubtitle">Who We Serve</h2>
-        <ul className="serviceslist">
-          <li>Private equity and venture capital</li>
-          <li>Private credit and real estate funds</li>
-          <li>Hedge funds and long-short strategies</li>
-          <li>Infrastructure and fund of funds</li>
-          <li>Family offices and high net worth investors</li>
-          <li>Pension plans, endowments, and foundations</li>
-          <li>Insurance companies and capital market participants</li>
+        {/* Use the new styles.clientGrid for a clean, multi-column layout */}
+        <ul className={styles.clientGrid}> 
+          <li className={styles.clientItem}>
+            Private equity and venture capital
+          </li>
+          <li className={styles.clientItem}>
+            Private credit and real estate funds
+          </li>
+          <li className={styles.clientItem}>
+            Hedge funds and long-short strategies
+          </li>
+          <li className={styles.clientItem}>
+            Infrastructure and fund of funds
+          </li>
+          <li className={styles.clientItem}>
+            Family offices and high net worth investors
+          </li>
+          <li className={styles.clientItem}>
+            Pension plans, endowments, and foundations
+          </li>
+          <li className={styles.clientItem}>
+            Insurance companies and capital market participants
+          </li>
         </ul>
 
+        {/* Services Section */}
         <h2 className="servicessubtitle">Our Services</h2>
 
-        <div className="servicesservicesContainer">
-          <div className="servicesserviceColumn">
-            <h3 className="servicesserviceTitle">Core Advisory</h3>
-            <ul className="serviceslist">
+        <div className={styles.servicesContainer}>
+          <div className={styles.serviceColumn}>
+            <h3 className={styles.serviceTitle}>Core Advisory</h3>
+            <ul className={styles.moduleList}>
               {coreAdvisory.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
             </ul>
           </div>
 
-          <div className="servicesserviceColumn">
-            <h3 className="servicesserviceTitle">Specialized Support</h3>
-            <ul className="serviceslist">
+          <div className={styles.serviceColumn}>
+            <h3 className={styles.serviceTitle}>Specialized Support</h3>
+            <ul className={styles.moduleList}>
               {specializedSupport.map((item, index) => (
                 <li key={index}>{item}</li>
               ))}
@@ -69,6 +88,7 @@ export default function PrivateCapitalPage() {
           </div>
         </div>
 
+        {/* Approach and Results Section */}
         <h2 className="servicessubtitle">Our Approach and Results</h2>
 
         <p className="servicesparagraph">
@@ -79,14 +99,14 @@ export default function PrivateCapitalPage() {
           Over time, we have become a trusted advisor—providing ongoing support across a range of critical areas, including:
         </p>
 
-        <ul className="serviceslist">
+        <ul className={styles.resultsList}>
           <li>
             Development and implementation of transfer pricing policies and procedures
           </li>
 
           <li>
             Tax structuring and compliance, including:
-            <ul>
+            <ul className={styles.resultsNestedList}>
               <li>Preparation of entity-level tax returns</li>
               <li>Establishing tax nexus for foreign principals</li>
               <li>State and local tax advisory</li>
@@ -95,7 +115,7 @@ export default function PrivateCapitalPage() {
 
           <li>
             Outsourced CFO and bookkeeping services, including:
-            <ul>
+            <ul className={styles.resultsNestedList}>
               <li>Preparation of monthly financial statements</li>
               <li>Bill payment and payroll processing</li>
               <li>Strategic financial oversight</li>

@@ -1,0 +1,123 @@
+/* private.module.css */
+
+/* --- Content Structure --- */
+
+/* Constrain max-width for better readability on large screens and center content */
+.contentWrapper {
+    width: 100%;
+    max-width: 1200px; /* Adjust this value as needed for content width */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Add some horizontal padding inside the wrapper */
+}
+
+/* --- Services Columns (Core Advisory / Specialized Support) --- */
+
+.servicesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive two-column layout */
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.serviceColumn {
+    padding: 20px;
+    /* Use a very subtle background for separation */
+     color: #1a2b4c !important;
+      background: linear-gradient(to left, #e9eff7, #fafafa);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    border-top: 3px solid #004595; /* Accent border on top */
+     transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.serviceTitle {
+    font-size: 1.1rem;
+      color: #1a2b4c !important;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e9eff7;
+}
+
+.moduleList {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.moduleList li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #1a2b4c;
+}
+
+/* --- Who We Serve Grid --- */
+
+.clientGrid {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    /* Create a responsive grid with a minimum column width of 300px */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+/* Inherits styles from .servicesserviceItem but uses a new class for consistency */
+.clientItem {
+    padding: 12px 15px;
+    color: #1a2b4c !important;
+    border-left: 4px solid #004595;
+      background: linear-gradient(to left, #e9eff7, #fafafa);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, background 0.2s ease;
+    border-radius: 4px; /* Slightly rounded corners */
+}
+
+.clientItem:hover {
+    transform: translateX(4px);
+    background: #f5f7ff;
+}
+
+.serviceColumn:hover{
+
+     transform: translateX(4px);
+    background: #f5f7ff;
+}
+
+
+/* --- Approach and Results List --- */
+
+.resultsList {
+    list-style: disc;
+    padding-left: 25px;
+    margin-top: 15px;
+    color: #1a2b4c;
+    line-height: 1.7;
+}
+
+.resultsList > li {
+    margin-bottom: 15px;
+}
+
+.resultsNestedList {
+    list-style: circle; /* Change bullet style for nested list */
+    padding-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.resultsNestedList li {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments for smaller screens (optional) */
+@media (max-width: 768px) {
+    .servicesContainer {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+    }
+    .clientGrid {
+        grid-template-columns: 1fr; /* Stack client items on small screens */
+    }
+}

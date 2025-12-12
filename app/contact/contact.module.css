@@ -1,7 +1,6 @@
 .wrapper {
-  width: 100%;
-  min-height: 100vh;
-  padding: 8vw 4vw;
+
+  padding: 4vw 4vw;
   background: linear-gradient(90deg, #1e3b8c, #395cbd);
   display: flex;
   justify-content: center;
@@ -11,7 +10,7 @@
 .card {
   width: 100%;
   max-width: 650px;
-  padding: 50px;
+  padding: 30px 50px;
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   border-radius: 20px;
