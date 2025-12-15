@@ -44,7 +44,7 @@ function Footer() {
 
           {/* Logo Section */}
           <div className={styles.section1}>
-            <img src="inverted.png" alt="PKF Logo" className={styles.logo} />
+            <img src="AXS-LOGO.svg" alt="PKF Logo" className={styles.logo} />
           </div>
 
           {/* SERVICES */}

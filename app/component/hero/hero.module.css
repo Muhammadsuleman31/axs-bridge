@@ -1,0 +1,449 @@
+.text2 *{
+    text-align: right;
+}
+
+.text2 p{
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 630px;
+}
+.AI{
+  color: #0080E6; 
+   font-weight: 900;
+}
+
+.text2{
+  position: absolute;
+  right: 50px;
+ 
+}
+
+
+.text1{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.world {
+ background: linear-gradient(to right, #0080E6, #01037C);
+
+  /* 2. Clip the background so it only shows up where the text is */
+  /* This is the most crucial step */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* 3. Make the text transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback for non-webkit browsers */
+}
+.welcome{
+   font-size: clamp(30px, 5.07vw, 73px);
+    font-weight: 500;
+    
+}
+
+.world{
+  font-size: clamp(32px, 5.28vw, 76px);
+    font-weight: 900;
+}
+.text1 p{
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 630px;
+}
+
+.readmorebutton {
+
+  /* Box & Layout */
+  display: inline-flex; /* Allows aligning text and arrow easily */
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px; /* Adjust padding to match size */
+  border-radius: 10px; /* Adjust border-radius for rounded corners */
+  text-decoration: none;
+  cursor: pointer;
+  background: linear-gradient(to right, #0085EA, #01017B); /* Slight reversal or change */
+  color: #ffffff; 
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
+}
+
+/* Hover Effect (Optional: Make it slightly darker or shift on hover) */
+.readmorebutton:hover {
+  background: linear-gradient(to right, #007bff, #0056b3); /* Dark to light blue gradient */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Arrow Icon Styling */
+.arrowicon {
+  margin-left: 8px; /* Space between text and arrow */
+  font-size: 30px;
+  font-weight: 400; /* Size of the arrow */
+  line-height: 1; /* Helps vertical alignment */
+  transform: translateY(-1px); /* Fine-tune vertical alignment */
+}
+
+.cta{
+    margin-top: 30px;
+}
+
+.herosection{
+    padding: 5vh 50px;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+    max-width: 1200px;
+    position: relative;
+      aspect-ratio: 20 / 9; 
+      overflow: hidden;
+}
+
+.text1 *{
+    text-align: left;
+}
+
+
+.vector1{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -10;
+animation: slideInFromRight 10s linear infinite;
+}
+
+.vector2{
+  position: absolute;
+  top: 0;
+  
+ animation: slideInFromLeft 10s linear infinite;
+
+}
+
+.vector12{
+  position: absolute;
+  bottom: 0;
+ 
+ animation: slideInFromRight2 10s linear infinite;
+}
+
+.vector21{
+  position: absolute;
+  top: 0;
+ right:0;
+  z-index: -10;
+   animation: slideInFromLeft2 10s linear infinite;
+}
+
+.text1{
+    animation: texttoright 10s linear infinite;
+}
+
+.text2{
+   animation: texttoleft 10s linear infinite;
+   max-width: 610px;
+}
+.graph{
+  animation: graph 10s linear infinite;
+  z-index: -1000;
+}
+.layer{
+  position: absolute;
+  animation: layer 10s linear infinite;
+  width: 40%;
+}
+.graph2{
+  display: none;
+}
+
+
+@keyframes texttoright {
+  /* Initial state is on screen (0% to 37.5%) */
+  0%, 46% {
+    transform: translateX(0px); 
+    opacity: 1;
+     z-index: 5000;
+  }
+
+  /* 2.5-second move out (37.5% to 50%) */
+  50% {
+    transform: translateX(600px);
+    opacity: 0;
+      z-index: -1000;
+  }
+
+  /* 7.5-second stay off-screen (50% to 87.5%) */
+  96% {
+     transform: translateX(600px);
+    opacity: 0;
+      z-index: -1000;
+  }
+
+  /* 2.5-second move in (87.5% to 100%) */
+  100% {
+    transform: translateX(0px);
+     opacity: 1;
+       z-index: 5000;
+  }
+}
+
+
+@keyframes texttoleft {
+  /* Initial state is on screen (0% to 37.5%) */
+  0%, 46% {
+    transform: translateX(-600px); 
+    opacity: 0;
+  }
+
+  /* 2.5-second move out (37.5% to 50%) */
+  50% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  /* 7.5-second stay off-screen (50% to 87.5%) */
+  96% {
+     transform: translateX(0px);
+    opacity: 1;
+  }
+
+  /* 2.5-second move in (87.5% to 100%) */
+  100% {
+    transform: translateX(-600px);
+     opacity: 0;
+  }
+}
+
+
+@keyframes slideInFromLeft {
+  /* Initial state is on screen (0% to 37.5%) */
+  0%, 46% {
+    transform: translateX(0px); 
+  }
+
+  /* 2.5-second move out (37.5% to 50%) */
+  50% {
+    transform: translateX(-800px);
+  }
+
+  /* 7.5-second stay off-screen (50% to 87.5%) */
+  96% {
+    transform: translateX(-800px); 
+  }
+
+  /* 2.5-second move in (87.5% to 100%) */
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+
+@keyframes graph {
+  /* Initial state is on screen (0% to 37.5%) */
+  0%, 46% {
+   
+    opacity: 1;
+  }
+
+  /* 2.5-second move out (37.5% to 50%) */
+  50% {
+   
+    opacity: 0;
+  }
+
+  /* 7.5-second stay off-screen (50% to 87.5%) */
+  96% {
+    
+    opacity: 0;
+  }
+
+  /* 2.5-second move in (87.5% to 100%) */
+  100% {
+    
+     opacity: 1;
+  }
+}
+
+
+@keyframes layer {
+  /* Initial state is on screen (0% to 37.5%) */
+  0%, 46% {
+   
+    opacity: 0;
+  }
+
+  /* 2.5-second move out (37.5% to 50%) */
+  50% {
+   
+    opacity: 1;
+  }
+
+  /* 7.5-second stay off-screen (50% to 87.5%) */
+  96% {
+    
+    opacity: 1;
+  }
+
+  /* 2.5-second move in (87.5% to 100%) */
+  100% {
+    
+     opacity: 0;
+  }
+}
+
+
+
+@keyframes slideInFromLeft2 {
+  /* Initial state is on screen (0% to 37.5%) */
+  0%, 46% {
+    transform: translateX(800px); 
+  }
+
+  /* 2.5-second move out (37.5% to 50%) */
+  50% {
+    transform: translateX(0px);
+  }
+
+  /* 7.5-second stay off-screen (50% to 87.5%) */
+  96% {
+    transform: translateX(0px); 
+  }
+
+  /* 2.5-second move in (87.5% to 100%) */
+  100% {
+    transform: translateX(800px);
+  }
+}
+
+@keyframes slideInFromRight {
+  /* Initial state is on screen (0% to 37.5%) */
+  0%, 46% {
+    transform: translateX(0px); 
+  }
+
+  /* 2.5-second move out (37.5% to 50%) */
+  50% {
+    transform: translateX(800px);
+  }
+
+  /* 7.5-second stay off-screen (50% to 87.5%) */
+  96% {
+    transform: translateX(800px); 
+  }
+
+  /* 2.5-second move in (87.5% to 100%) */
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+
+@keyframes slideInFromRight2 {
+  /* Initial state is on screen (0% to 37.5%) */
+  0%, 46% {
+    transform: translateX(-800px); 
+  }
+
+  /* 2.5-second move out (37.5% to 50%) */
+  50% {
+    transform: translateX(0px);
+  }
+
+  /* 7.5-second stay off-screen (50% to 87.5%) */
+  96% {
+    transform: translateX(0px); 
+  }
+
+  /* 2.5-second move in (87.5% to 100%) */
+  100% {
+    transform: translateX(-800px);
+  }
+}
+
+
+
+
+
+@media (max-width: 1024px) {
+  .herosection {
+      aspect-ratio:unset;
+    height: 100% !important; 
+  }
+  .text2{
+   max-width: 480px;
+}
+}
+
+
+@media (max-width: 768px) {
+  .herosection {
+    height: 50vh; 
+    min-height: 450px;
+    
+   
+  }
+  .graph2{
+    display: block;
+  }
+
+  .text2 .graph2{
+    width: 70%;
+    align-self: center;
+   
+  }
+
+
+  
+  .text2{
+  max-width: 100%;
+  right: 0px;
+ 
+  }
+
+
+
+  .text2 *{
+    justify-self: center;
+    text-align: center;
+}
+
+
+.graph{
+  display: none;
+}
+.text1 *{
+    text-align: center;
+}
+
+  .text2 p{
+     max-width: 85%;
+  }
+
+}
+
+@media (max-width: 468px) {
+
+
+
+}

@@ -3,11 +3,16 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import InfiniteSlider from "./component/InfiniteSlider"
 import Link from "next/link";
-
+import Hero from "./component/hero/hero"
+import Hero2 from './component/hero2/hero2'
+import Heroslider from './component/heroslider/heroslider'
 
 function HomePage() {
   return (
     <>
+    {/* <Heroslider/>
+    <Hero2/> */}
+    <Hero/>
     <section className={styles.homepage}>
       <div className={styles.text}>
         <h1>Welcome To Our <span className="gradient-text">World</span></h1>

@@ -1,0 +1,134 @@
+.world {
+ background: linear-gradient(to right, #0080E6, #01037C);
+
+  /* 2. Clip the background so it only shows up where the text is */
+  /* This is the most crucial step */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* 3. Make the text transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback for non-webkit browsers */
+}
+
+.AI{
+  color: #0080E6; 
+   font-weight: 900;
+}
+.welcome{
+   font-size: clamp(30px, 5.07vw, 73px);
+    font-weight: 500;
+    
+}
+
+.world{
+  font-size: clamp(32px, 5.28vw, 76px);
+    font-weight: 900;
+}
+
+.text2 *{
+    text-align: right;
+}
+
+.text2 p{
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 630px;
+}
+
+.readmorebutton {
+
+  /* Box & Layout */
+  display: inline-flex; /* Allows aligning text and arrow easily */
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px; /* Adjust padding to match size */
+  border-radius: 10px; /* Adjust border-radius for rounded corners */
+  text-decoration: none;
+  cursor: pointer;
+  background: linear-gradient(to right, #0085EA, #01017B); /* Slight reversal or change */
+  color: #ffffff; 
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover Effect (Optional: Make it slightly darker or shift on hover) */
+.readmorebutton:hover {
+  background: linear-gradient(to right, #007bff, #0056b3); /* Dark to light blue gradient */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
+}
+
+/* Arrow Icon Styling */
+.arrowicon {
+  margin-left: 8px; /* Space between text and arrow */
+  font-size: 30px;
+  font-weight: 400; /* Size of the arrow */
+  line-height: 1; /* Helps vertical alignment */
+  transform: translateY(-1px); /* Fine-tune vertical alignment */
+}
+
+.cta{
+    margin-top: 30px;
+}
+
+.herosection{
+    padding: 0px 50px;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px auto;
+    max-width: 1200px;
+    position: relative;
+      aspect-ratio: 20 / 9; 
+}
+
+.vector12{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.vector21{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.graph2{
+    display: none;
+}
+
+
+@media (max-width: 1024px) {
+  .herosection {
+      aspect-ratio:unset;
+    height: 50vh !important; 
+  }
+}
+
+
+@media (max-width: 768px) {
+  .herosection {
+    height: 50vh; 
+    min-height: 450px; 
+
+  }
+
+  .graph2{
+    display: block;
+  }
+
+  .text2 *{
+    text-align: center;
+}
+
+  .graph{
+    display: none;
+  }
+}

@@ -5,6 +5,7 @@ html, body, p {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  font-size: 16px;
  
 }
 
@@ -48,8 +49,21 @@ button:hover {
   box-shadow: 0 4px 10px rgba(0, 72, 255, 0.3);
 }
 
+.grad {
+ background: linear-gradient(to right, #0080E6, #01037C);
+
+  /* 2. Clip the background so it only shows up where the text is */
+  /* This is the most crucial step */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* 3. Make the text transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback for non-webkit browsers */
+}
+
 .gradient-text {
-  background: linear-gradient(90deg, #2460e4, #0b1f64);
+ background: linear-gradient(to right, #0080E6, #01037C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 800;

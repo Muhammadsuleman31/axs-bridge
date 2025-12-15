@@ -28,7 +28,7 @@ function Navbar() {
     <div className={styles.navparent}>
     <nav className={styles.navbar}>
       <div className={styles.navbarLeft}>
-        <img src="logo.png" alt="PKF Logo" />
+        <img src="AXS-LOGO.svg" alt="PKF Logo" />
       </div>
 
       {/* Desktop links */}

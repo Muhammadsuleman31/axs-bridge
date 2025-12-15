@@ -9,7 +9,8 @@ const slidesData = [
   { id: 4, title: "Business Solutions", link: "/services/business-solutions", img: "services-icons/business-solutions-icon.svg" },
   { id: 5, title: "Corporate Finance", link: "/services/corporate-finance", img: "services-icons/corporate-finance-icon.svg" },
   { id: 6, title: "Private Capital Solutions", link: "/services/private-capital", img: "services-icons/pcsc.svg" },
-  { id: 7, title: "Sustainability & ESG", link: "/services/sustainability-esg", img: "services-icons/esg.svg" }
+  { id: 7, title: "Sustainability & ESG", link: "/services/sustainability-esg", img: "services-icons/esg.svg" },
+  { id: 8, title: "Hospitality Consulting", link: "/services/hospitality-consulting", img: "services-icons/hospitality-consulting.svg" }
 ];
 
 function FiniteSlider() {
