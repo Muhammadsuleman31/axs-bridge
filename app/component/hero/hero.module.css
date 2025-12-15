@@ -446,6 +446,31 @@ animation: slideInFromRight 10s linear infinite;
 
 @media (max-width: 468px) {
 
+.readmorebutton {
+    /* Slightly less padding */
+    padding: 6px 15px; 
+    /* Reduce the gap between text and arrow */
+    gap: 10px; 
+    /* Optionally reduce font size slightly */
+    font-size: 14px;
+    
+    /* NEW: Make the button full-width if it's the only CTA in its row */
+    /* If you want it to stretch across the container: */
+    /* width: 100%; */ 
+    
+    /* If you want it to stay centered and just shrink: (This is usually better) */
+    display: inline-flex; 
+  }
+  
+  /* 2. Adjust the arrow icon size to match the smaller button */
+  .arrowicon {
+    font-size: 24px; /* Smaller arrow */
+    margin-left: 5px; /* Less space */
+  }
 
+  /* Ensure the CTA wrapper is set up correctly for centering (if not handled by .cta above) */
+  .cta {
+    text-align: center;
+  }
 
 }
