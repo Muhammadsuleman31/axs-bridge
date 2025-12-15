@@ -129,14 +129,14 @@
   bottom: 0;
   right: 0;
   z-index: -10;
-animation: slideInFromRight 10s linear infinite;
+animation: slideInFromRight 10s ease-in-out infinite;
 }
 
 .vector2{
   position: absolute;
   top: 0;
   
- animation: slideInFromLeft 10s linear infinite;
+ animation: slideInFromLeft 10s ease-in-out infinite;
 
 }
 
@@ -144,7 +144,7 @@ animation: slideInFromRight 10s linear infinite;
   position: absolute;
   bottom: 0;
  
- animation: slideInFromRight2 10s linear infinite;
+ animation: slideInFromRight2 10s ease-in-out infinite;
 }
 
 .vector21{
@@ -152,24 +152,24 @@ animation: slideInFromRight 10s linear infinite;
   top: 0;
  right:0;
   z-index: -10;
-   animation: slideInFromLeft2 10s linear infinite;
+   animation: slideInFromLeft2 10s ease-in-out infinite;
 }
 
 .text1{
-    animation: texttoright 10s linear infinite;
+    animation: texttoright 10s ease-in-out infinite;
 }
 
 .text2{
-   animation: texttoleft 10s linear infinite;
+   animation: texttoleft 10s ease-in-out infinite;
    max-width: 610px;
 }
 .graph{
-  animation: graph 10s linear infinite;
+  animation: graph 10s ease-in-out infinite;
   z-index: -1000;
 }
 .layer{
   position: absolute;
-  animation: layer 10s linear infinite;
+  animation: layer 10s ease-in-out infinite;
   width: 40%;
 }
 .graph2{
