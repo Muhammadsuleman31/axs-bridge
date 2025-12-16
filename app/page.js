@@ -13,20 +13,7 @@ function HomePage() {
     {/* <Heroslider/>
     <Hero2/> */}
     <Hero/>
-    <section className={styles.homepage}>
-      <div className={styles.text}>
-        <h1>Welcome To Our <span className="gradient-text">World</span></h1>
-        <p>
-         We are a community of dynamic business advisors where belonging, growth, and action converge. Together, we unlock powerful opportunities for our clients, empower our people, and uplift the communities we serve.
-        </p>
-        {/* <button>Read more</button> */}
-      </div>
-      <div className={styles.image}>
-        <div className={styles.circle}>
-          <img src="tower.jpg"   alt="PKF Speaker" />
-        </div>
-      </div>
-    </section>
+  
   <div className={styles.secondsection}>
     <div className={styles.heading}><h1>We believe in growth beyond boundaries</h1></div>
     <div className={styles.desc}>

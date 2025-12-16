@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styles from './hero.module.css';
 import Image from 'next/image';
 import arrow from '../../../public/RM-arrow.svg'
@@ -18,8 +18,9 @@ import SmallBottomRightVector from '../../../public/hero/Vector2.svg';
 
 export default function hero() {
 
-
+        const [activeSlide, setActiveSlide] = useState(1);
         const SLIDE_COUNT = 2; // Define the total number of slides
+        const intervalRef = useRef(null);
 
     // Function to advance to the next slide
     const nextSlide = () => {
@@ -27,8 +28,29 @@ export default function hero() {
         setActiveSlide(prevSlide => (prevSlide % SLIDE_COUNT) + 1);
     };
 
+    const stopInterval = () => {
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
+    };
+    const startInterval = () => {
+        stopInterval(); // Clear any existing interval first
+        // Start a new interval and store its ID in the ref
+        intervalRef.current = setInterval(nextSlide, 6000); 
+    }
 
-        const [activeSlide, setActiveSlide] = useState(1);
+    const goToSlide = (slideNumber) => {
+        if (activeSlide !== slideNumber) {
+            setActiveSlide(slideNumber);
+            // Crucial: Reset the timer immediately after the user interacts
+            startInterval(); 
+        }
+    };
+
+
+
+
+
         const goToSlide1 = () => {
         if (activeSlide !== 1) {
             setActiveSlide(1);
@@ -44,15 +66,16 @@ export default function hero() {
     };
 
 
-    useEffect(() => {
-        // Set the interval to run the nextSlide function every 3000 milliseconds (3 seconds)
-        const intervalId = setInterval(nextSlide, 6000);
+  useEffect(() => {
+        // 1. Start the interval when the component mounts
+        startInterval(); 
 
-        // Cleanup function: This runs when the component unmounts or the effect re-runs.
-        // It's crucial to clear the interval to stop the timer and prevent memory leaks.
-        return () => clearInterval(intervalId);
+        // 2. Cleanup function: This runs when the component unmounts.
+        // It uses the stopInterval helper to clear the timer.
+        return () => stopInterval();
 
-    // The empty dependency array [] ensures this effect runs only once after the initial render.
+    // The empty dependency array [] ensures this effect runs only once on mount and cleanup on unmount.
+    // The manual interaction handles the timer reset.
     }, []);
 
 
@@ -194,12 +217,12 @@ export default function hero() {
  <div className={styles.dotNavigation}>
                     <button 
                         className={`${styles.dot} ${activeSlide === 1 ? styles.activeDot : ''}`} 
-                        onClick={goToSlide1}
+                       onClick={() => goToSlide(1)}
                         aria-label="Show slide 1: Welcome to our World"
                     />
                     <button 
                         className={`${styles.dot} ${activeSlide === 2 ? styles.activeDot : ''}`} 
-                        onClick={goToSlide2}
+                        onClick={() => goToSlide(2)}
                         aria-label="Show slide 2: AI & IT's Impact"
                     />
                 </div>

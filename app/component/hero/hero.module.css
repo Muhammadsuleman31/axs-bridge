@@ -128,14 +128,14 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: -10;
+  z-index: -5000;
 
 }
 
 .vector2{
   position: absolute;
   top: 0;
-  
+  z-index: -5000;
 
 
 }
@@ -143,6 +143,7 @@
 .vector12{
   position: absolute;
   bottom: 0;
+  z-index: -5000;
 
 }
 
@@ -150,7 +151,8 @@
   position: absolute;
   top: 0;
  right:0;
-  z-index: -10;
+ z-index: -5000;
+
 
 }
 
@@ -406,6 +408,34 @@
 
 
 
+/* Dot Navigation Styling */
+.dotNavigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10; /* Ensure dots are above content */
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(87, 86, 86, 0.4);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 0;
+}
+
+.dot:hover {
+  background: rgba(24, 24, 24, 0.4);
+  transform: none;
+  box-shadow: none;
+}
+
 
 
 
@@ -497,22 +527,10 @@
     text-align: center;
   }
 
-}
 
-/* Dot Navigation Styling */
-.dotNavigation {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 10; /* Ensure dots are above content */
-}
-
-.dot {
-    width: 12px;
-    height: 12px;
+  .dot {
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background: rgba(87, 86, 86, 0.4);
     border: none;
@@ -521,13 +539,10 @@
     padding: 0;
 }
 
-.dot:hover {
-  background: rgba(24, 24, 24, 0.4);
-  transform: none;
-  box-shadow: none;
 }
 
 .activeDot {
     background-color: #0080E6; /* Your primary blue color */
     transform: scale(1.2);
 }
+
