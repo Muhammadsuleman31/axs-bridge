@@ -10,10 +10,14 @@ function Navbar() {
   const [subMenuOpen, setSubMenuOpen] = useState(false);
   const [servicesHover, setServicesHover] = useState(false);
 
+
+  let Mobilelogo = styles.logologo;
+
   const toggleMenu = () => {
     if (menuOpen) {
       setMenuOpen(false);
       setSubMenuOpen(false);
+      Mobilelogo += ` ${styles.logotoright}`
     } else {
       setMenuOpen(true);
     }
@@ -90,7 +94,7 @@ function Navbar() {
       <div className={`${styles.slideMenu} ${menuOpen ? styles.open : ""}`}>
         <div className={styles.panelHeader}>
         <div className={styles.logopart}>
-      <div className={styles.logologo}>
+      <div className={Mobilelogo}>
         <Image 
                  src={invertedaxs} 
                  alt="graph"   
