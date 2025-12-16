@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from "react";
 import styles from "./navbar.module.css";
 import { FaBars, FaTimes, FaChevronRight, FaChevronLeft, FaChevronDown } from "react-icons/fa";
-
+import Image from 'next/image';
+import logofull from '../../public/logofull.svg'
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
@@ -27,10 +28,18 @@ function Navbar() {
     <>
     <div className={styles.navparent}>
     <nav className={styles.navbar}>
-      <div className={styles.navbarLeft}>
-        <img src="AXS-LOGO.svg" alt="PKF Logo" />
-      </div>
-
+     <div className={styles.logopart}>
+      <div className={styles.logologo}>
+        <Image 
+                 src={logofull} 
+                 alt="graph"   
+                 layout="responsive"
+                 objectFit="contain"
+                    className={styles.navlogo1}
+                    />
+                    </div>
+      <div className={styles.logotext}><h1>AXS BRIDGE</h1></div>
+     </div>
       {/* Desktop links */}
       <div className={styles.navbarLinks}>
         <a href="/">Home</a>
@@ -64,6 +73,7 @@ function Navbar() {
           )}
         </div>
 
+        <a href="/news">News</a>
         <a href="/about">About Us</a>
       </div>
 

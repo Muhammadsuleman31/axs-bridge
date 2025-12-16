@@ -51,6 +51,7 @@ a{
   text-decoration: none;
   cursor: pointer;
   background: linear-gradient(to right, #0085EA, #01017B); /* Slight reversal or change */
+
   color: #ffffff; 
   font-size: 16px;
   font-weight: bold;
@@ -78,6 +79,8 @@ a{
 
 
 
+
+
 .grad {
  background: linear-gradient(to right, #0080E6, #01037C);
 
@@ -90,6 +93,7 @@ a{
   -webkit-text-fill-color: transparent;
   color: transparent; /* Fallback for non-webkit browsers */
 }
+
 
 .gradient-text {
  background: linear-gradient(to right, #0080E6, #01037C);

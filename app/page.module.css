@@ -107,8 +107,14 @@
   justify-items: center;
   margin: 0 auto;
   gap: 100px;
-  background: linear-gradient(90deg, #1e3b8c, #395cbd);
-  color: #fafafa;
+   background: linear-gradient(
+    to right,
+    #013eae 0%, /* Lighter Blue at the top */
+    #013eae 50%,
+    #013eae 100% /* Darker Blue at the bottom */
+  );
+
+  color: #ffffff;
    
 }
 
@@ -121,7 +127,7 @@
 .desc p{
   font-weight: 400;
   font-size: 1rem;
-  color: #e9eff7;
+  color: #ffffff;
     text-align: justify;
     padding: 10px 0px;
 }
@@ -148,9 +154,8 @@
   backdrop-filter: blur(10px);           /* frosted glass effect */
   -webkit-backdrop-filter: blur(10px);
 
-  border-bottom: 2px solid rgba(0, 69, 149, 0.2); /* subtle blue line */
-  box-shadow: 0 4px 15px rgba(0, 69, 149, 0.1);   /* gentle blue glow */
- 
+  border-bottom: 1px solid rgba(0, 69, 149, 0.2); /* subtle blue line */
+
 }
 
 
@@ -175,7 +180,7 @@
     background: rgba(255, 255, 255, 0.7); /* translucent white */
   backdrop-filter: blur(10px);           /* frosted glass effect */
   -webkit-backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(0, 69, 149, 0.2); /* subtle blue line */
+  border-bottom: 1px solid rgba(0, 69, 149, 0.2); /* subtle blue line */
  
   
 }

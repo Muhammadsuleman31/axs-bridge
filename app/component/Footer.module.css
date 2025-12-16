@@ -1,18 +1,29 @@
-.logo{
-    height: 16rem;
-}
+
 
 .footer{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     justify-content: space-around;
     align-items:start;
-      background: linear-gradient(0deg, #0d1a3d, #000000);
+ background: linear-gradient(
+    to bottom,
+    #013eae 0%, /* Lighter Blue at the top */
+    #011e93 50%,
+    #01037c 100% /* Darker Blue at the bottom */
+  );
      /* background-color: #0a1430;;  */
    /* background: linear-gradient(90deg, #1e3b8c, #1e3b8c); */
     padding: 5vh 0vh;
     color: #e9eff7;
 }
+
+
+.footer h3{
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+
 
 
 .sectionlinks{
@@ -23,7 +34,8 @@
 }
 
 .sectionlinks a{
-   
+    font-size: 0.9rem;
+    font-weight: 500;
     transition: color 0.5s;
 }
 
@@ -47,8 +59,23 @@
 
 
  .section1 {
+   display: flex;
+   flex-direction: column;
  justify-self: center;
+ justify-items: center;
+ align-self: center;
 }
+
+.section1 img{
+  margin: 0 auto;
+}
+
+.section1 div{
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 20px 0px;
+}
+
 /*
 .section2 {
     background-color: pink;
@@ -61,21 +88,51 @@
 } */
 
 .talk{
-    padding: 0px 10vw;
+   margin: 0 auto;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+   justify-content: center;
+   
 }
+
 
 .talk h1{
-    font-size: 6rem;
+    font-size: 4rem;
+    font-weight: 300;
+    margin: 4vh;
+    
 }
 
+.talk div{
+    align-self: center;
+ 
+}
+
+.talkwrapper:hover .talk div{
+
+  background: linear-gradient(to left, #0080E6, #01037C);
+   -webkit-background-clip: text;
+  background-clip: text;
+
+  /* 3. Make the text transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent; 
+
+
+}
+
+.talk h1:hover{
+   color: linear-gradient(to left, #0080E6, #01037C);}
+
+
 .talk{
-     background-color: #fafafa;
+
+  gap: 10vw;
      color: #1A2B4C;
 }
 .arrowContainer {
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,12 +149,12 @@
 
 
 .arrowLink:hover {
- color: linear-gradient(90deg, #1e3b8c, #2460e4);
+ color: linear-gradient(to right, #0080E6, #01037C);
 }
 
 .arrowIcon {
-  font-size: 10rem; /* big size like your example */
-  color: inherit; /* inherits from .arrowLink */
+  font-size: 6.5rem; /* big size like your example */
+  color: #01037C; /* inherits from .arrowLink */
   transition: transform 0.3s ease;
 }
 
@@ -143,9 +200,7 @@
     padding: 4vh 6vw;
   }
 
-  .talk h1{
-    font-size: 5rem;
-  }
+
 
   .arrowIcon {
   font-size: 8rem; 
@@ -194,7 +249,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 0.5px solid gray;
+    border-bottom: 0.2px solid rgba(255, 255, 255, 0.199) ;
     margin-bottom: 10px;
   }
 
@@ -219,5 +274,14 @@
 
 .talk{
     padding: 0px 6vw;
+}
+ .talk h1{
+    font-size: 3rem;
+    font-weight: 300;
+    margin: 4vh 0vh;
+    
+}
+  .arrowIcon {
+  font-size: 5rem; 
 }
 }

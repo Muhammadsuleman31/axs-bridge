@@ -4,7 +4,6 @@ import styles from "./Footer.module.css";
 import { FaTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FiArrowUpRight, FiChevronDown } from "react-icons/fi";
 
-
 function Footer() {
   const [openSection, setOpenSection] = useState(null);
   const footerRef = useRef(null);
@@ -31,10 +30,10 @@ function Footer() {
     <div className={styles.talkwrapper}>
       <a href="/contact">
         <div className={styles.talk}>
-          <div className="gradient-text"><h1>LET'S TALK</h1></div>
+          <div className="grad"><h1>LET’S TALK</h1></div>
           <div className={styles.arrowContainer}>
             <div className={styles.arrowLink}>
-              <FiArrowUpRight className={styles.arrowIcon} />
+              <FiArrowUpRight strokeWidth={0.6} className={styles.arrowIcon} />
             </div>
           </div>
         </div>
@@ -45,7 +44,8 @@ function Footer() {
 
           {/* Logo Section */}
           <div className={styles.section1}>
-            <img src="AXS-LOGO.svg" alt="PKF Logo" className={styles.logo} />
+            <img src="invertedaxs.svg" alt="AXS Logo" className={styles.logo} />
+            <div>AXS BRIDGE</div>
           </div>
 
           {/* SERVICES */}
@@ -54,7 +54,7 @@ function Footer() {
               className={styles.sectionheading}
               onClick={() => toggleSection("services")}
             >
-              <h3>Services</h3>
+              <h3>SERVICES</h3>
               <FiChevronDown
                 className={`${styles.chevron} ${isOpen("services") ? styles.rotate : ""}`}
               />
@@ -78,7 +78,7 @@ function Footer() {
               className={styles.sectionheading}
               onClick={() => toggleSection("about")}
             >
-              <h3>About Us</h3>
+              <h3>ABOUT US</h3>
               <FiChevronDown
                 className={`${styles.chevron} ${isOpen("about") ? styles.rotate : ""}`}
               />
@@ -94,7 +94,7 @@ function Footer() {
           {/* SOCIAL */}
           <div className={styles.section4}>
             <div className={styles.sectionheading}>
-              <h3>Follow Us</h3>
+              <h3>FOLLOW US</h3>
             </div>
 
             <div className={`${styles.socialIcons} ${styles.open}`}>
