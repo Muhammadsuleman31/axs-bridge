@@ -173,7 +173,27 @@
   display: none;
   z-index: 2001;
   transition: transform 0.3s ease, color 0.3s ease;
+  user-select: none; /* Standard */
+  -webkit-user-select: none; /* For older WebKit/Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For Internet Explorer/Edge */
+
+  /* 2. Prevent Mobile Tap Highlight (Crucial for Android/Webkit) */
+  -webkit-tap-highlight-color: transparent; 
+  outline: none; /* Sometimes necessary, but use sparingly */
 }
+
+.hamburger img{
+  
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cross{
+  transform: translateY(10px);
+}
+
 
 .hamburger:hover{
    color: #ebb812;
@@ -230,7 +250,7 @@
   align-items: center;
   justify-content: space-between;
  height: 80px;
-   padding: 0 50px;
+   padding: 0 5vw;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -238,24 +258,37 @@
   color: white !important;
 }
 
-
 @keyframes logotoright {
   0% {
-    /* Initial state (menu is closed) */
     transform: translateX(0px) rotate(0deg); 
     opacity: 1;
-    z-index: -1000;
+    /* Removed z-index: -1000; and position: absolute; from 0% */
   }
 
-
-  
   100% {
-    /* Final state (menu is open) */
-    transform: translateX(73vw) rotate(360deg); /* ADDED ROTATION HERE */
-    position: absolute; /* Keeps element out of normal flow */
+    /* Set the final state to move the logo far right and hide it */
+    transform: translateX(73vw) rotate(360deg); 
     opacity: 0;
-    z-index: 5000;
+    /* REMOVED position: absolute; and z-index: 5000; */
   }
+}
+
+/* Base styles for logotext */
+.logotext {
+  /* CRITICAL: Add transition to the logotext container */
+  transition: margin-left 0.5s ease-in-out forwards; 
+}
+
+/* New class to shift the text left and potentially hide it/shrink it */
+.texttoleft {
+  /* The logo moves right and disappears, so the text needs to slide left 
+     to take its spot. We can do this with a negative margin or translation, 
+     but since it's an H1, changing its width or opacity is cleaner. */
+  opacity: 1; /* Fade the text out as the logo moves */
+     transform: translateX(-68px);
+  
+  /* If you want it to snap to the left border, you'd calculate a compensating margin 
+     based on the width of the logo, but fading it out is often simpler. */
 }
 
 .logotoright{

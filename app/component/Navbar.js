@@ -40,7 +40,7 @@ function Navbar() {
   // When menuOpen is false (menu is hidden/closing), we want the base class PLUS logotoright.
  // Correct Logic: 'logotoright' is added when menuOpen is TRUE (open)
 const mobileLogoClasses = `${styles.logologo} ${menuOpen ? styles.logotoright : ''}`;
-
+const mobileTextClasses = `${styles.logotext} ${menuOpen ? styles.texttoleft : ''}`;
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -114,7 +114,7 @@ const mobileLogoClasses = `${styles.logologo} ${menuOpen ? styles.logotoright : 
                 alt="graph"   
                 layout="responsive"
                 objectFit="contain"
-                className={styles.navlogo1}
+                className={styles.cross}
               /> : <FaBars />}
           </div>
 
@@ -135,7 +135,7 @@ const mobileLogoClasses = `${styles.logologo} ${menuOpen ? styles.logotoright : 
                     className={styles.navlogo1}
                   />
                 </div>
-                <div className={styles.logotext}><h1>AXS BRIDGE</h1></div>
+                <div className={mobileTextClasses}><h1>AXS BRIDGE</h1></div>
               </div>
             </div>
 
