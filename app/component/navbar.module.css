@@ -38,12 +38,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 1vw;
   flex-direction: row;
  
 }
 .logologo{
-  width: 7vw;
+ width: clamp(65px, 7vw, 120px);
 }
 .logopart h1{
   margin: 0;
@@ -194,7 +194,12 @@
   right: -100%;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(0deg, #0d1a3d, #000000);
+    background: linear-gradient(
+    to right,
+    #013eae 0%, /* Lighter Blue at the top */
+    #013eae 50%,
+    #013eae 100% /* Darker Blue at the bottom */
+  );
   color: white;
   display: flex;
   flex-direction: column;
@@ -214,6 +219,10 @@
  height: 80px;
    padding: 0 50px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.panelHeader .logotext{
+  color: white !important;
 }
 
 .panelHeader img {

@@ -88,9 +88,18 @@ function Navbar() {
       {/* Mobile slide menu */}
       <div className={`${styles.slideMenu} ${menuOpen ? styles.open : ""}`}>
         <div className={styles.panelHeader}>
-        <div className={styles.navbarLeft}>
-        <img src="logo.png" alt="PKF Logo" />
-      </div>
+        <div className={styles.logopart}>
+      <div className={styles.logologo}>
+        <Image 
+                 src={logofull} 
+                 alt="graph"   
+                 layout="responsive"
+                 objectFit="contain"
+                    className={styles.navlogo1}
+                    />
+                    </div>
+      <div className={styles.logotext}><h1>AXS BRIDGE</h1></div>
+     </div>
         </div>
 
         <div className={styles.slideMenuContent}>
