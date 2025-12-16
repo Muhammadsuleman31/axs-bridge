@@ -1,5 +1,6 @@
 "use client"
-import React from 'react';
+
+import React, { useEffect, useState } from "react";
 import styles from './hero.module.css';
 import Image from 'next/image';
 import arrow from '../../../public/RM-arrow.svg'
@@ -17,10 +18,86 @@ import SmallBottomRightVector from '../../../public/hero/Vector2.svg';
 
 export default function hero() {
 
+
+        const SLIDE_COUNT = 2; // Define the total number of slides
+
+    // Function to advance to the next slide
+    const nextSlide = () => {
+        // If activeSlide is 1, go to 2. If it's 2, loop back to 1.
+        setActiveSlide(prevSlide => (prevSlide % SLIDE_COUNT) + 1);
+    };
+
+
+        const [activeSlide, setActiveSlide] = useState(1);
+        const goToSlide1 = () => {
+        if (activeSlide !== 1) {
+            setActiveSlide(1);
+        }       
+    };
+
+
+    // Function to switch to the second slide (text2)
+    const goToSlide2 = () => {
+        if (activeSlide !== 2) {
+            setActiveSlide(2);
+        }
+    };
+
+
+    useEffect(() => {
+        // Set the interval to run the nextSlide function every 3000 milliseconds (3 seconds)
+        const intervalId = setInterval(nextSlide, 6000);
+
+        // Cleanup function: This runs when the component unmounts or the effect re-runs.
+        // It's crucial to clear the interval to stop the timer and prevent memory leaks.
+        return () => clearInterval(intervalId);
+
+    // The empty dependency array [] ensures this effect runs only once after the initial render.
+    }, []);
+
+
+//     `${styles.text1} ${styles.tt}`;
+    let text1Classes = styles.text1;
+    let text2Classes = styles.text2;
+    let graphClasses = styles.graph;
+    let layerClasses = `${styles.layer} ${styles.graph}`;
+    let vector1Class = styles.vector1;
+    let vector2Class = styles.vector2;
+    let vector12Class =styles.vector12;
+    let vector21Class = styles.vector21;
+    
+
+    if (activeSlide === 1) {
+        // Slide 1 is active (entering)
+        // You want to add .texttoright11 to text1
+        text1Classes += ` ${styles.texttoright11}`;
+        // You want to replace with .texttoleft11 on text2 (assuming this is the exit animation)
+        text2Classes += ` ${styles.texttoleft12}`; // Note: Using texttoleft11 to match your request
+        layerClasses += ` ${styles.layernv}`
+        graphClasses += ` ${styles.graphv}`
+        vector21Class += ` ${styles.slideOutToRight}`
+        vector12Class += ` ${styles.slideOutToLeft}`
+        vector1Class += ` ${styles.slideInFromRight}`
+        vector2Class += ` ${styles.slideInFromLeft}`
+
+    } else {
+        // Slide 2 is active (entering)
+        // You want to replace text1 with .texttoright12 (assuming this is the exit animation)
+        text1Classes += ` ${styles.texttoright12}`;
+        // You want to add .texttoleft12 to text2
+        text2Classes += ` ${styles.texttoleft11}`;
+        layerClasses += ` ${styles.layerv}`
+        graphClasses += ` ${styles.graphnv}`
+        vector21Class += ` ${styles.slideInFromRight}`
+        vector12Class += ` ${styles.slideInFromLeft}`
+        vector1Class += ` ${styles.slideOutToRight}`
+        vector2Class += ` ${styles.slideOutToLeft}`
+    }
+
   return (
   <>
   <div className={styles.herosection}>
-        <div className={`${styles.graph} ${styles.layer}`}>  
+        <div className={layerClasses}>  
            <Image 
                    src={layer} 
                    alt="graph"   
@@ -28,7 +105,7 @@ export default function hero() {
                    objectFit="contain"
                       />
           </div>
-  <div className={styles.text1}>
+  <div className={text1Classes}>
   <h1>
   <span className={styles.welcome}>WELCOME TO</span>
   <br/> <span className={styles.world}>OUR WORLD</span>
@@ -52,7 +129,7 @@ export default function hero() {
         </a>
 </div>
   </div>
-    <div className={styles.text2}>
+    <div className={text2Classes}>
     <h1>
     <span className={styles.welcome}><span className={styles.AI}>AI</span> & IT'S IMPACT</span>
     <br/><span className={styles.welcome}>ON</span> <span className={styles.world}>FINANCE</span>
@@ -76,7 +153,7 @@ export default function hero() {
           </a>
   </div>
     </div>
-  <div className={styles.graph}>
+  <div className={graphClasses}>
    <Image 
            src={graph} 
            alt="graph"   
@@ -84,7 +161,7 @@ export default function hero() {
            objectFit="contain"
               />
   </div>
-   <div className={styles.vector1}>
+   <div className={vector1Class}>
    <Image 
            src={vector1} 
            alt="vector1"   
@@ -92,14 +169,14 @@ export default function hero() {
           
               />
   </div>
-   <div className={styles.vector2}>
+   <div className={vector2Class}>
    <Image 
            src={vector2} 
            alt="vector2"   
           
               />
   </div>
-    <div className={styles.vector12}>
+    <div className={vector12Class}>
    <Image 
            src={vector12} 
            alt="vector1"   
@@ -107,14 +184,25 @@ export default function hero() {
           
               />
   </div>
-   <div className={styles.vector21}>
+   <div className={vector21Class}>
    <Image 
            src={vector22} 
            alt="vector2"   
           
               />
   </div>
- 
+ <div className={styles.dotNavigation}>
+                    <button 
+                        className={`${styles.dot} ${activeSlide === 1 ? styles.activeDot : ''}`} 
+                        onClick={goToSlide1}
+                        aria-label="Show slide 1: Welcome to our World"
+                    />
+                    <button 
+                        className={`${styles.dot} ${activeSlide === 2 ? styles.activeDot : ''}`} 
+                        onClick={goToSlide2}
+                        aria-label="Show slide 2: AI & IT's Impact"
+                    />
+                </div>
   </div>
 
   </>

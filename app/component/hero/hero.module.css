@@ -129,22 +129,21 @@
   bottom: 0;
   right: 0;
   z-index: -10;
-animation: slideInFromRight 10s ease-in-out infinite;
+
 }
 
 .vector2{
   position: absolute;
   top: 0;
   
- animation: slideInFromLeft 10s ease-in-out infinite;
+
 
 }
 
 .vector12{
   position: absolute;
   bottom: 0;
- 
- animation: slideInFromRight2 10s ease-in-out infinite;
+
 }
 
 .vector21{
@@ -152,24 +151,70 @@ animation: slideInFromRight 10s ease-in-out infinite;
   top: 0;
  right:0;
   z-index: -10;
-   animation: slideInFromLeft2 10s ease-in-out infinite;
+
 }
 
 .text1{
-    animation: texttoright 10s ease-in-out infinite;
+   
 }
 
+.texttoright12{
+   animation: texttoright12 1s ease-in-out forwards;
+  
+}
+
+.texttoleft11{
+     animation: texttoleft11 1s ease-in-out forwards;
+}
+.texttoright11{
+   animation: texttoright11 1s ease-in-out forwards;
+}
+
+.texttoleft12{
+     animation: texttoleft12 1s ease-in-out forwards;
+}
+
+.graphv{
+    animation: graphv 1s ease-in-out forwards;
+}
+
+.graphnv{
+ animation: graphnv 1s ease-in-out forwards;
+}
+
+.layerv{
+ animation: layerv 1s ease-in-out forwards;
+}
+
+.layernv{
+ animation: layernv 1s ease-in-out forwards;
+}
+
+.slideInFromLeft{
+  animation: slideInFromLeft 1s ease-in-out forwards;
+}
+.slideOutToLeft{
+  animation: slideOutToLeft 1s ease-in-out forwards;
+}
+.slideOutToRight{
+  animation: slideOutToRight 1s ease-in-out forwards;
+}
+.slideInFromRight{
+  animation: slideInFromRight 1s ease-in-out forwards;
+}
+
+
 .text2{
-   animation: texttoleft 10s ease-in-out infinite;
+ 
    max-width: 610px;
 }
 .graph{
-  animation: graph 10s ease-in-out infinite;
+ 
   z-index: -1000;
 }
 .layer{
   position: absolute;
-  animation: layer 10s ease-in-out infinite;
+
   width: 40%;
 }
 .graph2{
@@ -177,57 +222,51 @@ animation: slideInFromRight 10s ease-in-out infinite;
 }
 
 
-@keyframes texttoright {
-  /* Initial state is on screen (0% to 37.5%) */
-  0%, 46% {
-    transform: translateX(0px); 
-    opacity: 1;
-     z-index: 5000;
-  }
+@keyframes texttoright11 {
 
-  /* 2.5-second move out (37.5% to 50%) */
-  50% {
+  0% {
     transform: translateX(600px);
     opacity: 0;
       z-index: -1000;
   }
-
-  /* 7.5-second stay off-screen (50% to 87.5%) */
-  96% {
-     transform: translateX(600px);
-    opacity: 0;
-      z-index: -1000;
+   100% {
+    transform: translateX(0px); 
+    opacity: 1;
+     z-index: 5000;
   }
+}
 
-  /* 2.5-second move in (87.5% to 100%) */
-  100% {
-    transform: translateX(0px);
+  @keyframes texttoright12{
+  0% {
+   transform: translateX(0px);
      opacity: 1;
        z-index: 5000;
+  }
+
+  100% {
+       transform: translateX(600px);
+    opacity: 0;
+      z-index: -1000;
+   
   }
 }
 
 
-@keyframes texttoleft {
-  /* Initial state is on screen (0% to 37.5%) */
-  0%, 46% {
+@keyframes texttoleft11 {
+  0% {
     transform: translateX(-600px); 
     opacity: 0;
   }
-
-  /* 2.5-second move out (37.5% to 50%) */
-  50% {
+  100% {
     transform: translateX(0px);
     opacity: 1;
-  }
-
-  /* 7.5-second stay off-screen (50% to 87.5%) */
-  96% {
+  }}
+  @keyframes texttoleft12{
+  0% {
      transform: translateX(0px);
     opacity: 1;
   }
 
-  /* 2.5-second move in (87.5% to 100%) */
   100% {
     transform: translateX(-600px);
      opacity: 0;
@@ -235,19 +274,20 @@ animation: slideInFromRight 10s ease-in-out infinite;
 }
 
 
-@keyframes slideInFromLeft {
+@keyframes slideInFromLeft11 {
   /* Initial state is on screen (0% to 37.5%) */
-  0%, 46% {
+  0%{
     transform: translateX(0px); 
   }
 
   /* 2.5-second move out (37.5% to 50%) */
-  50% {
+  100% {
     transform: translateX(-800px);
   }
-
+}
+@keyframes slideInFromLeft12 {
   /* 7.5-second stay off-screen (50% to 87.5%) */
-  96% {
+  0% {
     transform: translateX(-800px); 
   }
 
@@ -259,48 +299,50 @@ animation: slideInFromRight 10s ease-in-out infinite;
 
 
 
-@keyframes graph {
+@keyframes graphv {
   /* Initial state is on screen (0% to 37.5%) */
-  0%, 46% {
+  0%  {
    
-    opacity: 1;
+    opacity: 0;
   }
 
   /* 2.5-second move out (37.5% to 50%) */
-  50% {
+  100% {
    
-    opacity: 0;
+    opacity: 1;
   }
-
+}
+@keyframes graphnv {
   /* 7.5-second stay off-screen (50% to 87.5%) */
-  96% {
+  0% {
     
-    opacity: 0;
+    opacity: 1;
   }
 
   /* 2.5-second move in (87.5% to 100%) */
   100% {
     
-     opacity: 1;
+     opacity: 0;
   }
 }
 
 
-@keyframes layer {
+@keyframes layerv {
   /* Initial state is on screen (0% to 37.5%) */
-  0%, 46% {
+  0% {
    
     opacity: 0;
   }
 
   /* 2.5-second move out (37.5% to 50%) */
-  50% {
+  100% {
    
     opacity: 1;
-  }
+  }}
+  @keyframes layernv {
 
   /* 7.5-second stay off-screen (50% to 87.5%) */
-  96% {
+  0% {
     
     opacity: 1;
   }
@@ -314,64 +356,19 @@ animation: slideInFromRight 10s ease-in-out infinite;
 
 
 
-@keyframes slideInFromLeft2 {
+@keyframes slideInFromLeft{
   /* Initial state is on screen (0% to 37.5%) */
-  0%, 46% {
-    transform: translateX(800px); 
-  }
-
-  /* 2.5-second move out (37.5% to 50%) */
-  50% {
-    transform: translateX(0px);
-  }
-
-  /* 7.5-second stay off-screen (50% to 87.5%) */
-  96% {
-    transform: translateX(0px); 
-  }
-
-  /* 2.5-second move in (87.5% to 100%) */
-  100% {
-    transform: translateX(800px);
-  }
-}
-
-@keyframes slideInFromRight {
-  /* Initial state is on screen (0% to 37.5%) */
-  0%, 46% {
-    transform: translateX(0px); 
-  }
-
-  /* 2.5-second move out (37.5% to 50%) */
-  50% {
-    transform: translateX(800px);
-  }
-
-  /* 7.5-second stay off-screen (50% to 87.5%) */
-  96% {
-    transform: translateX(800px); 
-  }
-
-  /* 2.5-second move in (87.5% to 100%) */
-  100% {
-    transform: translateX(0px);
-  }
-}
-
-
-@keyframes slideInFromRight2 {
-  /* Initial state is on screen (0% to 37.5%) */
-  0%, 46% {
+  0% {
     transform: translateX(-800px); 
   }
 
   /* 2.5-second move out (37.5% to 50%) */
-  50% {
+  100% {
     transform: translateX(0px);
   }
-
-  /* 7.5-second stay off-screen (50% to 87.5%) */
-  96% {
+}
+ @keyframes slideOutToLeft{
+  0% {
     transform: translateX(0px); 
   }
 
@@ -380,6 +377,33 @@ animation: slideInFromRight 10s ease-in-out infinite;
     transform: translateX(-800px);
   }
 }
+
+
+
+@keyframes slideOutToRight {
+  /* Initial state is on screen (0% to 37.5%) */
+  0%{
+    transform: translateX(0px); 
+  }
+
+  /* 2.5-second move out (37.5% to 50%) */
+  100% {
+    transform: translateX(800px);
+  }
+}
+
+@keyframes slideInFromRight {
+  /* 7.5-second stay off-screen (50% to 87.5%) */
+  0% {
+    transform: translateX(800px); 
+  }
+
+  /* 2.5-second move in (87.5% to 100%) */
+  100% {
+    transform: translateX(0px);
+  }
+}
+
 
 
 
@@ -473,4 +497,37 @@ animation: slideInFromRight 10s ease-in-out infinite;
     text-align: center;
   }
 
+}
+
+/* Dot Navigation Styling */
+.dotNavigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10; /* Ensure dots are above content */
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(87, 86, 86, 0.4);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    padding: 0;
+}
+
+.dot:hover {
+  background: rgba(24, 24, 24, 0.4);
+  transform: none;
+  box-shadow: none;
+}
+
+.activeDot {
+    background-color: #0080E6; /* Your primary blue color */
+    transform: scale(1.2);
 }
