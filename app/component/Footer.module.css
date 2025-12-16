@@ -197,7 +197,7 @@
   .footer{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 4vh 6vw;
+    padding: 4vh 5vw;
   }
 
 
@@ -212,7 +212,7 @@
        .footer{
     display: grid;
     grid-template-columns: 1fr;
-    padding: 4vh 6vw;
+    padding: 4vh 5vw;
   }
    .sectionheading {
     cursor: pointer;

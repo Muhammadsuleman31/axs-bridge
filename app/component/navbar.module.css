@@ -194,7 +194,12 @@
   right: -100%;
   width: 100%;
   height: 100vh;
-    background: white;
+    background: linear-gradient(
+    to right,
+    #013eae 0%, /* Lighter Blue at the top */
+    #013eae 50%,
+    #013eae 100% /* Darker Blue at the bottom */
+  );
   color: white;
   display: flex;
   flex-direction: column;
@@ -216,7 +221,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.panelHeader .logotext{
+.panelHeader .logopart h1{
   color: white !important;
 }
 
@@ -225,13 +230,13 @@
 }
 
 .slideMenuContent {
-  padding: 15px 30px;
+  padding: 15px 5vw;
   display: flex;
   flex-direction: column;
 }
 
 .slideMenuContent a {
-  color: black;
+  color: white;
 
   text-decoration: none;
   font-size: 18px;
@@ -380,7 +385,7 @@ body.menu-open {
 
 .panelHeader {
   height: 60px;
-  padding: 0 6vw;
+  padding: 0 5vw;
 }
 
   }

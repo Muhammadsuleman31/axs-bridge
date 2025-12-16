@@ -4,6 +4,7 @@ import styles from "./navbar.module.css";
 import { FaBars, FaTimes, FaChevronRight, FaChevronLeft, FaChevronDown } from "react-icons/fa";
 import Image from 'next/image';
 import logofull from '../../public/logofull.svg'
+import invertedaxs from '../../public/invertedaxs.svg'
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [subMenuOpen, setSubMenuOpen] = useState(false);
@@ -91,7 +92,7 @@ function Navbar() {
         <div className={styles.logopart}>
       <div className={styles.logologo}>
         <Image 
-                 src={logofull} 
+                 src={invertedaxs} 
                  alt="graph"   
                  layout="responsive"
                  objectFit="contain"
