@@ -8,7 +8,7 @@
 
 .navbar {
   width: 100%;
-  height: 5vw;
+  height: 69px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -182,9 +182,19 @@
 .hamburger.open:hover {
    color: #ebb812;
 }
+
+@keyframes opacity {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 .hamburger.open {
   color: white;
-  transform: rotate(90deg);
+  animation-delay: 1.5sec;
+  animation: opacity 1s ease-in;
 }
 
 /* Mobile Slide Menu */
@@ -208,8 +218,11 @@
   overflow-y: auto;
 }
 
+
+
 .slideMenu.open {
   right: 0;
+  
 }
 
 .panelHeader {
@@ -227,23 +240,26 @@
 
 
 @keyframes logotoright {
-
   0% {
-    transform: translateX(0px);
-    opacity: 0;
-      z-index: -1000;
-  }
-   100% {
-    transform: translateX(73vw); 
-    position: absolute;
+    /* Initial state (menu is closed) */
+    transform: translateX(0px) rotate(0deg); 
     opacity: 1;
-     z-index: 5000;
+    z-index: -1000;
+  }
+
+
+  
+  100% {
+    /* Final state (menu is open) */
+    transform: translateX(73vw) rotate(360deg); /* ADDED ROTATION HERE */
+    position: absolute; /* Keeps element out of normal flow */
+    opacity: 0;
+    z-index: 5000;
   }
 }
 
-
 .logotoright{
-  animation: logotoright 10s ease-in-out forwards;
+  animation: logotoright 0.5s ease-in-out forwards;
 }
 
 .panelHeader .logologo{
