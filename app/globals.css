@@ -31,23 +31,45 @@ a{
   }
   }
 
-button {
-background: linear-gradient(90deg, #2460e4, #1e3b8c);
-  color: #fff;
-  font-weight: 600;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 6px;
+
+  .button {
+
+  /* Box & Layout */
+  display: inline-flex; /* Allows aligning text and arrow easily */
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px; /* Adjust padding to match size */
+  border-radius: 10px; /* Adjust border-radius for rounded corners */
+  text-decoration: none;
   cursor: pointer;
-  transition: all 0.4s ease;
+  background: linear-gradient(to right, #0085EA, #01017B); /* Slight reversal or change */
+  color: #ffffff; 
   font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 2000;
 }
 
-button:hover {
- background: linear-gradient(90deg, #1e3b8c, #2460e4);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 72, 255, 0.3);
+/* Hover Effect (Optional: Make it slightly darker or shift on hover) */
+.button:hover {
+  background: linear-gradient(to right, #007bff, #0056b3); /* Dark to light blue gradient */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-1px);
 }
+
+.arrowicon {
+  margin-left: 8px; /* Space between text and arrow */
+  font-size: 30px;
+  font-weight: 400; /* Size of the arrow */
+  line-height: 1; /* Helps vertical alignment */
+  transform: translateY(-1px); /* Fine-tune vertical alignment */
+}
+
+
+
 
 .grad {
  background: linear-gradient(to right, #0080E6, #01037C);

@@ -431,7 +431,8 @@
 }
 
 .dot:hover {
-  background: rgba(24, 24, 24, 0.4);
+  
+  background: #0080E6; 
   transform: none;
   box-shadow: none;
 }
