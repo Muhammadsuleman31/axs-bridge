@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./InfiniteSlider.module.css";
+import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 const slidesData = [
   { id: 1, title: "Assurance", link: "/services/assurance", img: "services-icons/assurance-icon.svg" },
@@ -131,8 +132,8 @@ function FiniteSlider() {
 
   return (
     <div className={styles.sliderContainer}>
-      <button className={styles.arrow} onClick={slidePrev} disabled={currentIndex === 0}>
-        &#8249;
+      <button className={`${styles.leftarrow} ${styles.arrow}`} onClick={slidePrev} disabled={currentIndex === 0}>
+       <FiChevronLeft size={60} /> {/* Adjust size as needed */}
       </button>
 
       <div
@@ -180,11 +181,11 @@ function FiniteSlider() {
       </div>
 
       <button
-        className={styles.arrow}
+        className={`${styles.rightarrow} ${styles.arrow}`}
         onClick={slideNext}
         disabled={currentIndex >= Math.ceil(slidesData.length - slidesPerView)}
       >
-        &#8250;
+       <FiChevronRight size={60} /> {/* Adjust size as needed */}
       </button>
     </div>
   );

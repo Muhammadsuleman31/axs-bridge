@@ -3,7 +3,7 @@
 }
 
 .text2 p{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     max-width: 630px;
 }
@@ -14,7 +14,7 @@
 
 .text2{
   position: absolute;
-  right: 50px;
+  right: 0px;
  
 }
 
@@ -60,7 +60,7 @@
     font-weight: 900;
 }
 .text1 p{
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 300;
     max-width: 630px;
 }
@@ -78,7 +78,7 @@
   cursor: pointer;
   background: linear-gradient(to right, #0085EA, #01017B); /* Slight reversal or change */
   color: #ffffff; 
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -106,14 +106,14 @@
 }
 
 .herosection{
-    padding: 0 50px;
+    /* padding: 0 50px; */
     display: flex;
     flex-direction: row;
     
     justify-content: space-between;
     align-items: center;
-    margin: 0px auto;
-    max-width: 1700px;
+    margin: 2vw 5vw;
+    
     position: relative;
       aspect-ratio: 20 / 9; 
       overflow: hidden;

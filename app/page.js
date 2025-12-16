@@ -121,7 +121,7 @@ const servicesVariants = {
     viewport={{ once: true, amount: 0.3 }} // Trigger once when 30% visible
 >
     <div className={styles.servicesheading}>
-        <div><h1>Services & Solutions</h1></div>
+        <div><h1 className="grad">Services & Solutions</h1></div>
         <div>
             {/* If Link is a Next.js component, make sure it's imported */}
            <a href="/services" className="button">

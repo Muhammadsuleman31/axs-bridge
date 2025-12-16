@@ -4,6 +4,7 @@ import styles from "./Footer.module.css";
 import { FaTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FiArrowUpRight, FiChevronDown } from "react-icons/fi";
 
+
 function Footer() {
   const [openSection, setOpenSection] = useState(null);
   const footerRef = useRef(null);

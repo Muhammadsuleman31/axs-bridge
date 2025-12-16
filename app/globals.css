@@ -19,6 +19,13 @@ a{
 }
 
 
+@media (min-width: 1400px) {
+  html{
+    font-size: 18px;
+  }
+  }
+
+
   @media (max-width: 1000px) {
   html{
     font-size: 14px;
