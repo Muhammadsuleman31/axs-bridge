@@ -44,7 +44,8 @@ function Footer() {
 
           {/* Logo Section */}
           <div className={styles.section1}>
-            <img src="invertedaxs.svg" alt="AXS Logo" className={styles.logo} />
+            <img src="invertedaxs.svg" alt="AXS Logo" className={styles.logo}  onContextMenu={(e) => e.preventDefault()} 
+        draggable={false}  />
             <div>AXS BRIDGE</div>
           </div>
 

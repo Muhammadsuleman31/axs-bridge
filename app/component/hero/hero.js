@@ -126,7 +126,9 @@ export default function hero() {
                    alt="graph"   
                    layout="responsive"
                    objectFit="contain"
-                      />
+                      onContextMenu={(e) => e.preventDefault()} 
+        draggable={false} 
+                     />
           </div>
   <div className={text1Classes}>
   <h1>
@@ -139,7 +141,9 @@ export default function hero() {
            alt="graph"   
            layout="responsive"
            objectFit="contain"
-              />
+              onContextMenu={(e) => e.preventDefault()} 
+        draggable={false} 
+             />
   </div>
   <p>We are a community of dynamic business advisors where belonging, growth, and action converge. Together, we unlock powerful opportunities for our clients, empower our people, and uplift the communities we serve.</p>
   
@@ -163,6 +167,8 @@ export default function hero() {
              alt="graph"   
              layout="responsive"
              objectFit="contain"
+                 onContextMenu={(e) => e.preventDefault()} 
+        draggable={false} 
                 />
     </div>
     <p>From predictive analytics to intelligent automation, AI enables smarter decisions, stronger risk management, and faster growth. We help organizations harness data-driven intelligence to transform financial strategy, operations, and outcomes.</p>
@@ -182,21 +188,25 @@ export default function hero() {
            alt="graph"   
            layout="responsive"
            objectFit="contain"
-              />
+              
+               onContextMenu={(e) => e.preventDefault()} 
+        draggable={false} />
   </div>
    <div className={vector1Class}>
    <Image 
            src={vector1} 
            alt="vector1"   
           
-          
+           onContextMenu={(e) => e.preventDefault()} 
+        draggable={false} 
               />
   </div>
    <div className={vector2Class}>
    <Image 
            src={vector2} 
            alt="vector2"   
-          
+           onContextMenu={(e) => e.preventDefault()} 
+        draggable={false} 
               />
   </div>
     <div className={vector12Class}>
@@ -204,14 +214,16 @@ export default function hero() {
            src={vector12} 
            alt="vector1"   
           
-          
+           onContextMenu={(e) => e.preventDefault()} 
+        draggable={false} 
               />
   </div>
    <div className={vector21Class}>
    <Image 
            src={vector22} 
            alt="vector2"   
-          
+           onContextMenu={(e) => e.preventDefault()} 
+        draggable={false} 
               />
   </div>
  <div className={styles.dotNavigation}>
