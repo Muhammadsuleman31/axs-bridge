@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useRef, useState } from "react";
 import styles from "./layout.module.css";
 
+
 const services = [
   { name: "Assurance", path: "/services/assurance" },
   {
