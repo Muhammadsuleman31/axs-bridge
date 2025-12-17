@@ -310,6 +310,14 @@
   padding: 15px 5vw;
   display: flex;
   flex-direction: column;
+   user-select: none; /* Standard */
+  -webkit-user-select: none; /* For older WebKit/Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For Internet Explorer/Edge */
+
+  /* 2. Prevent Mobile Tap Highlight (Crucial for Android/Webkit) */
+  -webkit-tap-highlight-color: transparent; 
+  outline: none; /* Sometimes necessary, but use sparingly */
 }
 
 .slideMenuContent a {
