@@ -190,13 +190,17 @@
 }
 
 @media (max-width: 1000px) {
+
   .section1{
-    display: none;
+    max-width: 100px;
+  }
+  .section1 div{
+font-size: 1.2rem;
   }
 
   .footer{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
     padding: 4vh 5vw;
   }
 
