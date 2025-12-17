@@ -164,16 +164,7 @@ export default function hero() {
     <span className={styles.welcome}><span className={styles.AI}>AI</span> & IT'S IMPACT</span>
     <br/><span className={styles.welcome}>ON</span> <span className={styles.world}>FINANCE</span>
     </h1>
-    <div className={styles.graph2}>
-     <Image 
-             src={layer} 
-             alt="graph"   
-             layout="responsive"
-             objectFit="contain"
-                 onContextMenu={(e) => e.preventDefault()} 
-        draggable={false} 
-                />
-    </div>
+  
     <p>From predictive analytics to intelligent automation, AI enables smarter decisions, stronger risk management, and faster growth. We help organizations harness data-driven intelligence to transform financial strategy, operations, and outcomes.</p>
     
     {/* <div className={styles.cta}>
