@@ -386,6 +386,7 @@
   padding: 0px 5vw;
   display: flex;
   flex-direction: column;
+  
 }
 
 .subMenuHeader span {
@@ -398,6 +399,14 @@
   font-weight: 400;
   margin: 12px 0;
   cursor: pointer;
+   user-select: none; /* Standard */
+  -webkit-user-select: none; /* For older WebKit/Safari */
+  -moz-user-select: none; /* For Firefox */
+  -ms-user-select: none; /* For Internet Explorer/Edge */
+
+  /* 2. Prevent Mobile Tap Highlight (Crucial for Android/Webkit) */
+  -webkit-tap-highlight-color: transparent; 
+  outline: none; /* Sometimes necessary, but use sparingly */
 }
 
 .subMenuContent div:hover {
