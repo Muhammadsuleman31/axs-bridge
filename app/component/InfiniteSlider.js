@@ -18,14 +18,14 @@ function FiniteSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(1);
   const [slideWidth, setSlideWidth] = useState(0);
+  
+  // Real-time drag state
+  const [dragOffset, setDragOffset] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
 
   const sliderRef = useRef(null);
   const trackRef = useRef(null);
-
-  // Fix flags
-  const isDragging = useRef(false);
-  const dragStartX = useRef(0);
-  const dragDelta = useRef(0);
+  const startX = useRef(0);
   const clickBlocked = useRef(false);
 
   // --------------------- DIMENSIONS ---------------------
@@ -41,152 +41,117 @@ function FiniteSlider() {
             parseFloat(style.marginRight);
 
           setSlideWidth(totalWidth);
-
           const viewportWidth = sliderRef.current.offsetWidth;
-          const visibleSlides = viewportWidth / totalWidth;
-
-          setSlidesPerView(visibleSlides);
+          setSlidesPerView(viewportWidth / totalWidth);
         }
       }
     }
 
     calculateDimensions();
     window.addEventListener("resize", calculateDimensions);
-    window.addEventListener("load", calculateDimensions);
-
-    return () => {
-      window.removeEventListener("resize", calculateDimensions);
-      window.removeEventListener("load", calculateDimensions);
-    };
+    return () => window.removeEventListener("resize", calculateDimensions);
   }, []);
 
-  // --------------------- SLIDE CONTROL ---------------------
-  const slideNext = () => {
-    const maxIndex = Math.ceil(slidesData.length - slidesPerView);
-    setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
-  };
+  const maxIndex = Math.max(0, Math.ceil(slidesData.length - slidesPerView));
 
-  const slidePrev = () => {
-    setCurrentIndex((prev) => Math.max(prev - 1, 0));
-  };
+  // --------------------- HELPERS ---------------------
+  const getSafeIndex = (index) => Math.max(0, Math.min(index, maxIndex));
 
-  // --------------------- MOUSE EVENTS ---------------------
-  const handleMouseDown = (e) => {
-    isDragging.current = true;
-    dragStartX.current = e.clientX;
-    dragDelta.current = 0;
+  // --------------------- EVENT HANDLERS ---------------------
+  const handleDragStart = (e) => {
+    setIsDragging(true);
+    startX.current = e.type === "mousedown" ? e.clientX : e.touches[0].clientX;
     clickBlocked.current = false;
   };
 
-  const handleMouseMove = (e) => {
-    if (!isDragging.current) return;
+  const handleDragMove = (e) => {
+    if (!isDragging) return;
 
-    dragDelta.current = e.clientX - dragStartX.current;
+    const currentX = e.type === "mousemove" ? e.clientX : e.touches[0].clientX;
+    const diff = currentX - startX.current;
 
-    // Start drag only if movement > 5px
-    if (Math.abs(dragDelta.current) > 5) {
+    // Apply a "resistance" if dragging past boundaries
+    let movement = diff;
+    if ((currentIndex === 0 && diff > 0) || (currentIndex >= maxIndex && diff < 0)) {
+        movement = diff * 0.3; // Rubber-band effect
+    }
+
+    setDragOffset(movement);
+
+    if (Math.abs(diff) > 10) {
       clickBlocked.current = true;
     }
   };
 
-  const handleMouseUp = () => {
-    if (!isDragging.current) return;
-    isDragging.current = false;
+  const handleDragEnd = () => {
+    if (!isDragging) return;
 
-    // Only slide if movement > 40px
-    if (Math.abs(dragDelta.current) > 40) {
-      if (dragDelta.current < 0) slideNext();
-      else slidePrev();
-    }
-  };
+    // Calculate how many slides were moved based on drag distance
+    const movedSlides = Math.round(dragOffset / slideWidth);
+    const nextIndex = getSafeIndex(currentIndex - movedSlides);
 
-  const handleMouseLeave = () => {
-    isDragging.current = false;
-  };
-
-  // --------------------- TOUCH EVENTS ---------------------
-  const touchStart = useRef(0);
-
-  const handleTouchStart = (e) => {
-    touchStart.current = e.touches[0].clientX;
-    dragDelta.current = 0;
-    clickBlocked.current = false;
-  };
-
-  const handleTouchMove = (e) => {
-    const delta = e.touches[0].clientX - touchStart.current;
-    dragDelta.current = delta;
-
-    if (Math.abs(delta) > 5) {
-      clickBlocked.current = true;
-      e.preventDefault();
-    }
-  };
-
-  const handleTouchEnd = () => {
-    if (Math.abs(dragDelta.current) > 40) {
-      if (dragDelta.current < 0) slideNext();
-      else slidePrev();
-    }
+    setIsDragging(false);
+    setDragOffset(0);
+    setCurrentIndex(nextIndex);
   };
 
   return (
     <div className={styles.sliderContainer}>
-      <button className={`${styles.leftarrow} ${styles.arrow}`} onClick={slidePrev} disabled={currentIndex === 0}>
-       <FiChevronLeft size={60} /> {/* Adjust size as needed */}
+      <button 
+        className={`${styles.leftarrow} ${styles.arrow}`} 
+        onClick={() => setCurrentIndex(prev => getSafeIndex(prev - 1))} 
+        disabled={currentIndex === 0}
+      >
+        <FiChevronLeft size={60} />
       </button>
 
       <div
         className={styles.sliderViewport}
         ref={sliderRef}
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseLeave}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        onMouseDown={handleDragStart}
+        onMouseMove={handleDragMove}
+        onMouseUp={handleDragEnd}
+        onMouseLeave={handleDragEnd}
+        onTouchStart={handleDragStart}
+        onTouchMove={handleDragMove}
+        onTouchEnd={handleDragEnd}
+        style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
       >
         <div
           className={styles.sliderTrack}
           ref={trackRef}
           style={{
-            transform: `translateX(-${currentIndex * slideWidth}px)`
+            // Disable transition ONLY while dragging for instant response
+            transition: isDragging ? "none" : "transform 0.5s ease-out",
+            transform: `translateX(${-currentIndex * slideWidth + dragOffset}px)`
           }}
         >
           {slidesData.map((slide) => (
-  <div className={styles.slide} key={slide.id}>
-    {/* Wrap the entire content in a link */}
-    <a
-      href={slide.link}
-      className={styles.slideLink} // Add this class to your CSS
-      onClick={(e) => {
-        // Prevent navigation if the user was just dragging/swiping
-        if (clickBlocked.current) {
-          e.preventDefault();
-        }
-      }}
-    >
-      <img 
-        src={slide.img} 
-        alt={slide.title} 
-       
-      />
-      <span className={styles.slideTitle}>
-        {slide.title}
-      </span>
-    </a>
-  </div>
-))}
+            <div className={styles.slide} key={slide.id}>
+              <a
+                href={slide.link}
+                className={styles.slideLink}
+                onClick={(e) => {
+                  if (clickBlocked.current) e.preventDefault();
+                }}
+              >
+                <img src={slide.img} alt={slide.title} draggable="false" style={{ 
+    aspectRatio: "1 / 1", // Makes the image a perfect square
+        // Ensures it fills the slide width
+  }} />
+                <span className={styles.slideTitle}>{slide.title}</span>
+              </a>
+            </div>
+          ))}
         </div>
       </div>
 
       <button
         className={`${styles.rightarrow} ${styles.arrow}`}
-        onClick={slideNext}
-        disabled={currentIndex >= Math.ceil(slidesData.length - slidesPerView)}
+        onClick={() => setCurrentIndex(prev => getSafeIndex(prev + 1))}
+        disabled={currentIndex >= maxIndex}
       >
-       <FiChevronRight size={60} /> {/* Adjust size as needed */}
+        <FiChevronRight size={60} />
       </button>
     </div>
   );
