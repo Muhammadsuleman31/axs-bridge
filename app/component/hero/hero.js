@@ -147,14 +147,14 @@ export default function hero() {
   </div>
   <p>We are a community of dynamic business advisors where belonging, growth, and action converge. Together, we unlock powerful opportunities for our clients, empower our people, and uplift the communities we serve.</p>
   
-  <div className={styles.cta}>
+  {/* <div className={styles.cta}>
 <a href="/about" className={styles.readmorebutton}>
           Read more
          <span className={styles.arrowicon}>
           &rsaquo;
          </span>
         </a>
-</div>
+</div> */}
   </div>
     <div className={text2Classes}>
     <h1>
@@ -173,14 +173,14 @@ export default function hero() {
     </div>
     <p>From predictive analytics to intelligent automation, AI enables smarter decisions, stronger risk management, and faster growth. We help organizations harness data-driven intelligence to transform financial strategy, operations, and outcomes.</p>
     
-    <div className={styles.cta}>
+    {/* <div className={styles.cta}>
   <a href="#" className={styles.readmorebutton}>
             Read more
            <span className={styles.arrowicon}>
             &rsaquo;
            </span>
           </a>
-  </div>
+  </div> */}
     </div>
   <div className={graphClasses}>
    <Image 

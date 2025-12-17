@@ -201,6 +201,7 @@
   .copyright1{
     grid-column: span 2;
     text-align: center;
+     align-self: center;
   }
   .copyright2{
     grid-column: span 3;
@@ -227,6 +228,7 @@ font-weight: 900;
    grid-template-columns: 1.5fr 1fr 1fr 1fr;
    text-align: left;
    gap: 40px;
+   margin-top: -1px; /* Pulls the div up to cover any sub-pixel gaps */
   }
   .copyright1{
    grid-column: span 1;
@@ -276,6 +278,7 @@ font-weight: 900;
     display: grid;
     grid-template-columns: 1fr;
     padding: 4vh 5vw;
+    padding-bottom: 0px;
   }
    .sectionheading {
     cursor: pointer;
