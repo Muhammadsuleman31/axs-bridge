@@ -4,7 +4,7 @@
 .container {
   display: flex;
   min-height: 100vh;
-  background-color: #F7F8FA;
+   background: linear-gradient(to bottom, #013eae 0%, #011e93 50%, #01037c 100%);
 }
 
 .sidebar {
@@ -23,7 +23,7 @@
   display: block;
   padding: 10px 30px;
   margin-bottom: 4px;
-  color: #1a2b4c;
+  color: #ffffff;
   text-decoration: none;
   position: relative;
   transition: background 0.3s, color 0.3s;
@@ -62,7 +62,7 @@
   padding-bottom: 7px;
   font-size: 0.80em;
   text-decoration: none;
-  color: #333;
+  color: #ffffff;
   transition: background 0.3s, color 0.3s;
   background: none;
 }
@@ -78,7 +78,7 @@
 
 .content {
   flex: 1;
-  background: linear-gradient(to right, #e9eff7, #fafafa);
+  background: white;
 }
 
 .breadcrumb {
