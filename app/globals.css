@@ -13,7 +13,7 @@ nav,
 button, 
 a, 
 .hamburger, 
-svg {
+img {
  /* 3. Blocks Long-Press menu on Mobile */
   -webkit-touch-callout: none;
   
@@ -24,6 +24,11 @@ svg {
   user-select: none;
   -webkit-user-select: none;
 }
+
+
+
+
+
 * {
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none; /* Prevents "save image" popup on long press */
