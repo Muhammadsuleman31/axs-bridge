@@ -129,6 +129,11 @@ function Footer() {
           </div>
 
         </div>
+        <div className={styles.copyrights}>
+        <div className={styles.copyright1}>© AXS BRIDGE International 2025. All Rights Reserved. </div>
+        <div className={styles.copyright2}>“PKF" and the PKF logo are registered trademarks used by PKF International Limited and member firms of the PKF Global Network. They may not be used by anyone other than a duly licensed member firm of the Network.</div>
+       
+        </div>
       </section>
     </>
   );
