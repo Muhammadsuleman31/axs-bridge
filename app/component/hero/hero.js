@@ -96,6 +96,7 @@ export default function hero() {
         text1Classes += ` ${styles.texttoright11}`;
         // You want to replace with .texttoleft11 on text2 (assuming this is the exit animation)
         text2Classes += ` ${styles.texttoleft12}`; // Note: Using texttoleft11 to match your request
+        text2Classes += ` ${styles.nodisplay}`; // Note: Using texttoleft11 to match your request
         layerClasses += ` ${styles.layernv}`
         graphClasses += ` ${styles.graphv}`
         vector21Class += ` ${styles.slideOutToRight}`
@@ -106,7 +107,9 @@ export default function hero() {
     } else {
         // Slide 2 is active (entering)
         // You want to replace text1 with .texttoright12 (assuming this is the exit animation)
+
         text1Classes += ` ${styles.texttoright12}`;
+        text1Classes += ` ${styles.nodisplay}`; // Note: Using texttoleft11 to match your request
         // You want to add .texttoleft12 to text2
         text2Classes += ` ${styles.texttoleft11}`;
         layerClasses += ` ${styles.layerv}`
