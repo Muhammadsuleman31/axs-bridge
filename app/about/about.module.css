@@ -41,7 +41,8 @@
 
 /* Paragraph spacing */
 .about p {
-  font-size: 1.1rem;
+  text-align: justify;
+  font-size: 1rem;
   line-height: 1.7;
    color: #1a2b4c;
   margin-bottom: 1.2rem;
