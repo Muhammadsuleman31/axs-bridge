@@ -443,13 +443,19 @@
 }
 
 
+/* Target screens between 768px and 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .text2 {
+    max-width: 420px !important;
+  }
+}
 
 
 @media (max-width: 1024px) {
   .herosection {
       /* aspect-ratio:unset; */
     height: 100% !important; 
-     padding: 5vh 50px;
+     padding: 5vh 0px;
   }
   .text2{
    max-width: 480px;
@@ -499,6 +505,10 @@
 .text1 *{
     text-align: center;
 }
+
+ .text1 p{
+  margin: 0 auto !important;
+     max-width: 85%;}
 
   .text2 p{
      max-width: 85%;
@@ -566,6 +576,10 @@
  .herosection {
  margin: 2vw 0;
  align-items: start;
+  }
+  .graph2{
+    margin: 0 auto !important;
+    max-width: 83%;
   }
 
 }
