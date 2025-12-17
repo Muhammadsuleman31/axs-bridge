@@ -62,6 +62,8 @@ const mobileTextClasses = `${styles.logotext} ${menuOpen ? styles.texttoleft : '
                 layout="responsive"
                 objectFit="contain"
                 className={styles.navlogo1}
+                onContextMenu={(e) => e.preventDefault()} 
+                 draggable={false}
               />
             </div>
             <div className={styles.logotext}><h1>AXS BRIDGE</h1></div>
