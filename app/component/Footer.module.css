@@ -233,7 +233,13 @@
     max-height: 500px;
     opacity: 1;
     transform: translateY(0);
+    margin-bottom: 10px;
   }
+
+  .close {
+   margin-bottom: 0px;
+  }
+
 
   }
 
@@ -284,4 +290,7 @@
   .arrowIcon {
   font-size: 5rem; 
 }
+
+
+
 }

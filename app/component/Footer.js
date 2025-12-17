@@ -84,7 +84,7 @@ function Footer() {
               />
             </div>
 
-            <div className={`${styles.sectionlinks} ${isOpen("about") ? styles.open : ""}`}>
+            <div className={`${styles.sectionlinks} ${isOpen("about") ? styles.open : styles.close}`}>
               <a href="/about">About</a>
               <a href="/cookie-policy">Cookie Policy</a>
               <a href="/privacy-policy">Privacy Policy</a>
