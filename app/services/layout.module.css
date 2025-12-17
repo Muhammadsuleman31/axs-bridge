@@ -16,8 +16,9 @@
 /* MAIN SERVICE LINKS */
 .link {
   display: block;
-  padding: 10px 30px;
+  padding: 10px 5vw;
   margin-bottom: 4px;
+  font-weight: 500;
   color: #ffffff;
   text-decoration: none;
   position: relative;
