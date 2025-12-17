@@ -155,28 +155,29 @@ function FiniteSlider() {
           }}
         >
           {slidesData.map((slide) => (
-            <div
-              className={styles.slide}
-              key={slide.id}
-              onClick={(e) => {
-                if (clickBlocked.current) {
-                  e.preventDefault();
-                  return;
-                }
-                window.location.href = slide.link;
-              }}
-            >
-              <img src={slide.img} alt={slide.title} />
-              <a
-                href={slide.link}
-                onClick={(e) => {
-                  if (clickBlocked.current) e.preventDefault();
-                }}
-              >
-                {slide.title}
-              </a>
-            </div>
-          ))}
+  <div className={styles.slide} key={slide.id}>
+    {/* Wrap the entire content in a link */}
+    <a
+      href={slide.link}
+      className={styles.slideLink} // Add this class to your CSS
+      onClick={(e) => {
+        // Prevent navigation if the user was just dragging/swiping
+        if (clickBlocked.current) {
+          e.preventDefault();
+        }
+      }}
+    >
+      <img 
+        src={slide.img} 
+        alt={slide.title} 
+       
+      />
+      <span className={styles.slideTitle}>
+        {slide.title}
+      </span>
+    </a>
+  </div>
+))}
         </div>
       </div>
 
