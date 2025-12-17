@@ -95,10 +95,10 @@
 /* Arrow Icon Styling */
 .arrowicon {
   margin-left: 8px; /* Space between text and arrow */
-  font-size: 30px;
+  font-size:  2rem;
   font-weight: 400; /* Size of the arrow */
   line-height: 1; /* Helps vertical alignment */
-  transform: translateY(-1px); /* Fine-tune vertical alignment */
+  transform: translateY(-2px); /* Fine-tune vertical alignment */
 }
 
 .cta{
@@ -542,6 +542,9 @@
     transition: background-color 0.3s, transform 0.3s;
     padding: 0;
 }
+ .herosection {
+ margin: 2vw 0;
+  }
 
 }
 

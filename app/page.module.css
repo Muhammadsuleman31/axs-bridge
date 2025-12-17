@@ -198,7 +198,7 @@
     .secondsection{
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 2vh;
     }
   }
 
@@ -210,16 +210,28 @@
 
   .desc p{
 
-    font-size: 1.2rem !important;
+   
   }
+
+  .servicesheading a{
+    font-weight: bold;
+    gap: 0px;
+    padding: 8px 10px;
+  }
+
   .servicesheading h1{
-    font-size: 2.8rem !important;
+    font-size: 2.4rem !important;
 }
 
   .servicesheading{
-  padding: 3vh 5vw;
+  padding: 2.4vh 5vw;
 }
 .secondsection{
+
    padding: 8vw 5vw;
+}
+.secondsection h1{
+  
+  font-size: 2.6rem;
 }
 }

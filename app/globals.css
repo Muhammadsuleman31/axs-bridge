@@ -19,25 +19,6 @@ a{
 }
 
 
-@media (min-width: 1400px) {
-  html{
-    font-size: 18px;
-  }
-  }
-
-
-  @media (max-width: 1000px) {
-  html{
-    font-size: 14px;
-  }
-  }
-
-  @media (max-width: 786px) {
-  html{
-    font-size: 12px;
-  }
-  }
-
 
   .button {
 
@@ -70,10 +51,10 @@ a{
 
 .arrowicon {
   margin-left: 8px; /* Space between text and arrow */
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: 400; /* Size of the arrow */
   line-height: 1; /* Helps vertical alignment */
-  transform: translateY(-1px); /* Fine-tune vertical alignment */
+  transform: translateY(-2px); /* Fine-tune vertical alignment */
 }
 
 
@@ -354,4 +335,32 @@ background-color: #fafafa;
 body{
   margin-top: 60px;
 }
+}
+
+
+@media (min-width: 1400px) {
+  html{
+    font-size: 18px;
+  }
+  }
+
+
+  @media (max-width: 1000px) {
+  html{
+    font-size: 14px;
+  }
+  }
+
+  @media (max-width: 786px) {
+  html{
+    font-size: 12px;
+  }
+  }
+
+  @media (max-width: 468px){
+    .arrowicon {
+  margin-left: 5px;
+   font-size: 1.6rem;
+   transform: translateY(-1px);
+  }
 }
