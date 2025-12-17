@@ -96,7 +96,7 @@ export default function hero() {
         text1Classes += ` ${styles.texttoright11}`;
         // You want to replace with .texttoleft11 on text2 (assuming this is the exit animation)
         text2Classes += ` ${styles.texttoleft12}`; // Note: Using texttoleft11 to match your request
-        text2Classes += ` ${styles.nodisplay}`; // Note: Using texttoleft11 to match your request
+       // text2Classes += ` ${styles.nodisplay}`; // Note: Using texttoleft11 to match your request
         layerClasses += ` ${styles.layernv}`
         graphClasses += ` ${styles.graphv}`
         vector21Class += ` ${styles.slideOutToRight}`
@@ -109,7 +109,7 @@ export default function hero() {
         // You want to replace text1 with .texttoright12 (assuming this is the exit animation)
 
         text1Classes += ` ${styles.texttoright12}`;
-        text1Classes += ` ${styles.nodisplay}`; // Note: Using texttoleft11 to match your request
+       // text1Classes += ` ${styles.nodisplay}`; // Note: Using texttoleft11 to match your request
         // You want to add .texttoleft12 to text2
         text2Classes += ` ${styles.texttoleft11}`;
         layerClasses += ` ${styles.layerv}`
@@ -164,7 +164,16 @@ export default function hero() {
     <span className={styles.welcome}><span className={styles.AI}>AI</span> & IT'S IMPACT</span>
     <br/><span className={styles.welcome}>ON</span> <span className={styles.world}>FINANCE</span>
     </h1>
-  
+    <div className={styles.graph2}>
+     <Image 
+             src={layer} 
+             alt="graph"   
+             layout="responsive"
+             objectFit="contain"
+                 onContextMenu={(e) => e.preventDefault()} 
+        draggable={false} 
+                />
+    </div>
     <p>From predictive analytics to intelligent automation, AI enables smarter decisions, stronger risk management, and faster growth. We help organizations harness data-driven intelligence to transform financial strategy, operations, and outcomes.</p>
     
     {/* <div className={styles.cta}>

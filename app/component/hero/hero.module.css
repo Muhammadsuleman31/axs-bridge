@@ -13,8 +13,8 @@
 }
 
 .text2{
- 
-
+  position: absolute;
+  right: 0px;
  
 }
 
@@ -470,9 +470,11 @@
   }
 
   .text2 .graph2{
+    
     width: 70%;
     align-self: center;
-   
+   display: block !important;
+    margin: 0 auto !important; /* Standard centering fallback */
   }
 
 
@@ -500,6 +502,20 @@
 
   .text2 p{
      max-width: 85%;
+     text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .text2 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* Forces all children to horizontal center */
+    justify-content: center !important;
+    width: 100% !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    transform: none !important; /* iOS sometimes struggles with transforms + alignment */
   }
 
 }
