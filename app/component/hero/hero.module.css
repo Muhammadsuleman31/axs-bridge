@@ -565,6 +565,7 @@
 }
  .herosection {
  margin: 2vw 0;
+ align-items: start;
   }
 
 }
