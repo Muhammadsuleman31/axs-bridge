@@ -9,7 +9,7 @@ import vector2 from '../../../public/hero/Vector2.svg'
 import vector12 from '../../../public/hero/Vector1_2.svg'
 import vector22 from '../../../public/hero/Vector2_2.svg'
 import graph from '../../../public/hero/vector-services.svg'  
-import layer from '../../../public/hero/aiaiai.png'    
+import layer from '../../../public/hero/layer_1v3.svg'    
 // Import your vector images and background image
 // NOTE: Ensure these paths are correct relative to your component file.
 import GraphVector from '../../../public/hero/vector-services.svg'; 
