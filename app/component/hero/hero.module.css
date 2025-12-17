@@ -117,11 +117,23 @@
     
     justify-content: space-between;
     align-items: center;
-    margin: 2vw 5vw;
+    margin: 2vw 0vw;
     
     position: relative;
-      aspect-ratio: 20 / 9; 
+      aspect-ratio: 21 / 9; 
       overflow: hidden;
+}
+
+
+.text1, .text2{
+   margin: 0vw 5vw;
+}
+.desktopgraph{
+ transform: translateX(-5vw);
+}
+.desktoplayer{
+  max-height: 416px;
+  transform: translateX(5vw);
 }
 
 .text1 *{
@@ -579,7 +591,7 @@
   }
   .graph2{
     margin: 0 auto !important;
-    max-width: 83%;
+    max-width: 95%;
   }
 
 }

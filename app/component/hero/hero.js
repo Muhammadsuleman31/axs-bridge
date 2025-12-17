@@ -129,6 +129,7 @@ export default function hero() {
                    alt="graph"   
                    layout="responsive"
                    objectFit="contain"
+                    className={styles.desktoplayer}
                       onContextMenu={(e) => e.preventDefault()} 
         draggable={false} 
                      />
@@ -191,10 +192,11 @@ export default function hero() {
            alt="graph"   
            layout="responsive"
            objectFit="contain"
-              
+        className={styles.desktopgraph}
                onContextMenu={(e) => e.preventDefault()} 
         draggable={false} />
   </div>
+  
    <div className={vector1Class}>
    <Image 
            src={vector1} 
