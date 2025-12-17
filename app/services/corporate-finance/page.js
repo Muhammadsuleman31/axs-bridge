@@ -27,7 +27,7 @@ export default function CorporateFinancePage() {
 
         <h2 className="servicessubtitle">Raising Finance</h2>
         <p className="servicesparagraph">
-          We help businesses access capital across the lifecycle—from early-stage funding to growth capital and strategic refinancing. Our equity advisory covers venture capital, private equity, and high net worth investors. Our debt advisory team provides market-wide insights to structure financing for acquisitions, expansion, or recapitalization.
+          We help businesses access capital across the lifecycle from early-stage funding to growth capital and strategic refinancing. Our equity advisory covers venture capital, private equity, and high net worth investors. Our debt advisory team provides market-wide insights to structure financing for acquisitions, expansion, or recapitalization.
         </p>
 
         <h2 className="servicessubtitle">Valuations</h2>
