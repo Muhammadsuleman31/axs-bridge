@@ -50,10 +50,10 @@
 
 /* ---------- Gradient Text ---------- */
 .gradientText {
-  background: linear-gradient(90deg, #1e3b8c, #2460e4);
+  background: linear-gradient(to right, #0080E6, #01037C, #01037C, #01037C);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 /* ---------- Section Title Accent Line ---------- */
@@ -95,4 +95,15 @@
 @media (max-width: 486px) {
         .about {
   padding: 0vw 6vw;}
+
+  .about h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
 }
