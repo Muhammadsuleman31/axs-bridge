@@ -260,11 +260,12 @@ font-weight: 900;
      grid-template-columns:1fr;
    grid-template-rows:1fr 1fr;
    text-align: left;
-   gap: 10px;
+   gap: 5px;
   }
   .copyright1{
    grid-row: span 1;
     text-align:  left;
+    align-self: flex-end;
   }
   .copyright2{
     grid-row: span 3;
