@@ -14,9 +14,15 @@ button,
 a, 
 .hamburger, 
 svg {
+ /* 3. Blocks Long-Press menu on Mobile */
+  -webkit-touch-callout: none;
+  
+  /* 4. Blocks Dragging on older browsers */
+  -webkit-user-drag: none;
+  
+  /* 5. Prevents accidental selection/highlighting */
   user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
 }
 * {
   -webkit-tap-highlight-color: transparent;
