@@ -97,6 +97,7 @@
 .dropdown {
   position: relative;
   height: 100%;
+  
 
 }
 
@@ -129,7 +130,7 @@
   border-radius: 0px;
   display: flex;
   flex-direction: column;
-  min-width: 230px;
+  min-width: 300px;
   padding-bottom: 10px;
   padding-top: 2px;
   opacity: 0;
@@ -140,6 +141,9 @@
   pointer-events: none;
 
   z-index: 5; /* lower than navbar (navbar z-index: 10) */
+    backdrop-filter: blur(12px);
+  box-shadow: 0 12px 30px rgba(0, 69, 149, 0.15);
+
 }
 
 /* Show dropdown on hover */
@@ -152,9 +156,9 @@
 
 
 .dropdownMenu a {
-  color: #004595;
+  color: #000000;
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   padding: 10px 20px;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -162,7 +166,7 @@
 
 .dropdownMenu a:hover {
   background: #f2f7ff;
-  color: #002f6c;
+  color: #004595;
 }
 
 /* Hamburger */
@@ -195,13 +199,7 @@
 }
 
 
-.hamburger:hover{
-   color: #ebb812;
-}
 
-.hamburger.open:hover {
-   color: #ebb812;
-}
 
 @keyframes opacity {
   0%{

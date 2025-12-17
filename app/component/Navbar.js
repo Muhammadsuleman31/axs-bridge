@@ -54,6 +54,15 @@ const mobileTextClasses = `${styles.logotext} ${menuOpen ? styles.texttoleft : '
         <nav className={styles.navbar}>
           
           {/* --- Desktop Logo Part --- */}
+         <a href="/" style={{ 
+    textDecoration: 'none', 
+    color: 'inherit', 
+    cursor: 'pointer', 
+    border: 'none', 
+    padding: 0, 
+    margin: 0, 
+    background: 'none' 
+  }}>
           <div className={styles.logopart}>
             <div className={styles.logologo}>
               <Image 
@@ -68,7 +77,7 @@ const mobileTextClasses = `${styles.logotext} ${menuOpen ? styles.texttoleft : '
             </div>
             <div className={styles.logotext}><h1>AXS BRIDGE</h1></div>
           </div>
-          
+          </a>
           {/* --- Desktop Links --- */}
           <div className={styles.navbarLinks}>
             <a href="/">Home</a>

@@ -33,7 +33,7 @@ export default function ContactPage() {
     <section className={styles.wrapper}>
       <div className={styles.card}>
         <h1>
-          Get In <span className="gradient-text">Touch</span>
+          Get In <span className="grad">Touch</span>
         </h1>
         <p className={styles.subtitle}>
           We’re here to help you grow beyond boundaries.

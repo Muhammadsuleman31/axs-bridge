@@ -3,7 +3,9 @@ import { useState, useRef, useEffect } from "react";
 import styles from "./Footer.module.css";
 import { FaTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { FiArrowUpRight, FiChevronDown } from "react-icons/fi";
-
+import Image from 'next/image';
+import invertedaxs from '../../public/invertedaxs.svg'
+import { usePathname } from 'next/navigation';
 function Footer() {
   const [openSection, setOpenSection] = useState(null);
   const footerRef = useRef(null);
@@ -25,9 +27,16 @@ function Footer() {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
+
+  const pathname = usePathname();
+
+  // Check if we are NOT on the contact page
+  const isNotContactPage = pathname !== '/contact';
+
   return (
     <>
-    <div className={styles.talkwrapper}>
+    {isNotContactPage && (
+         <div className={styles.talkwrapper}>
       <a href="/contact">
         <div className={styles.talk}>
           <div className="grad"><h1>LET’S TALK</h1></div>
@@ -39,13 +48,22 @@ function Footer() {
         </div>
       </a>
 </div>
+      )}
+   
       <section ref={footerRef}>
         <div className={styles.footer}>
 
           {/* Logo Section */}
           <div className={styles.section1}>
-            <img src="invertedaxs.svg" alt="AXS Logo" className={styles.logo}  onContextMenu={(e) => e.preventDefault()} 
-        draggable={false}  />
+        <Image 
+                src={invertedaxs} 
+                alt="graph"   
+                layout="responsive"
+                objectFit="contain"
+                className={styles.logo}
+                 onContextMenu={(e) => e.preventDefault()} 
+        draggable={false} 
+              /> 
             <div>AXS BRIDGE</div>
           </div>
 

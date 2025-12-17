@@ -1,21 +1,22 @@
 .wrapper {
 
   padding: 4vw 4vw;
-  background: linear-gradient(90deg, #1e3b8c, #395cbd);
+  background: linear-gradient(to right, #e9eff7, #fafafa);
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .card {
   width: 100%;
   max-width: 650px;
   padding: 30px 50px;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
+  background: rgb(255, 255, 255);
   border-radius: 20px;
+  backdrop-filter: blur(12px);
   box-shadow: 0 12px 30px rgba(0, 69, 149, 0.15);
-  color: #1e3a8a;
+  color: #01037C;
   text-align: center;
 }
 
@@ -28,7 +29,7 @@
 .subtitle {
   font-size: 1.2rem;
   margin-bottom: 35px;
-  color: #4e7ebd;
+  color: #01037C;
 }
 
 .form {
@@ -51,7 +52,7 @@
 
 .form input:focus,
 .form textarea:focus {
-  border-color: #1e3b8c;
+ 
   box-shadow: 0 0 10px rgba(30, 59, 140, 0.2);
 }
 
@@ -87,7 +88,7 @@
 }
 
 .form button {
-  background: #1e3b8c;
+  background: #01037C;
   color: #fafafa;
   font-size: 1.1rem;
   padding: 16px;
@@ -109,13 +110,13 @@
 .altEmail {
   margin-top: 25px;
   font-size: 1rem;
-  color: #1e3a8a;
+  color: #01037C;
 }
 
 .altEmail a {
   margin-left: 6px;
   text-decoration: underline;
-  color: #1e3b8c;
+  color: #01037C;
 }
 
 /* ----------------------- */
