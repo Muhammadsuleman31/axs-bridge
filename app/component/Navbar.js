@@ -111,7 +111,7 @@ const mobileTextClasses = `${styles.logotext} ${menuOpen ? styles.texttoleft : '
               )}
             </div>
 
-            <a href="/news">News</a>
+            <a href="/contact">Contact Us</a>
             <a href="/about">About Us</a>
           </div>
 
@@ -158,7 +158,7 @@ const mobileTextClasses = `${styles.logotext} ${menuOpen ? styles.texttoleft : '
               <a href="/">Home<FaChevronRight /></a>
               <a onClick={() => setSubMenuOpen(true)}>Services <FaChevronRight /></a>
               <a href="/about">About Us<FaChevronRight /></a>
-              <a href="/news">News<FaChevronRight /></a>
+              <a href="/contact">Contact Us<FaChevronRight /></a>
             </div>
 
             {/* Submenu */}
