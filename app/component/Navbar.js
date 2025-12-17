@@ -117,6 +117,8 @@ const mobileTextClasses = `${styles.logotext} ${menuOpen ? styles.texttoleft : '
                 layout="responsive"
                 objectFit="contain"
                 className={styles.cross}
+                 onContextMenu={(e) => e.preventDefault()} 
+        draggable={false} 
               /> : <FaBars />}
           </div>
 
@@ -135,7 +137,9 @@ const mobileTextClasses = `${styles.logotext} ${menuOpen ? styles.texttoleft : '
                     layout="responsive"
                     objectFit="contain"
                     className={styles.navlogo1}
-                  />
+                   onContextMenu={(e) => e.preventDefault()} 
+        draggable={false} 
+                 />
                 </div>
                 <div className={mobileTextClasses}><h1>AXS BRIDGE</h1></div>
               </div>
