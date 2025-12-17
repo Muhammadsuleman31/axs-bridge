@@ -205,6 +205,9 @@
   0%{
     opacity: 0;
   }
+  70%{
+    opacity: 0;
+  }
   100%{
     opacity: 1;
   }
@@ -212,7 +215,7 @@
 .hamburger.open {
   color: white;
   animation-delay: 1.5sec;
-  animation: opacity 1s ease-in;
+  animation: opacity 0.8s cubic-bezier(0.17, 0.67, 0.83, 1.67);
 }
 
 /* Mobile Slide Menu */
@@ -231,7 +234,7 @@
   color: white;
   display: flex;
   flex-direction: column;
-  transition: right 0.2s ease;
+  transition: right 0.4s ease-out;
   z-index: 1500;
   overflow-y: auto;
 }
@@ -263,6 +266,10 @@
     /* Removed z-index: -1000; and position: absolute; from 0% */
   }
 
+  70%{
+     opacity: 1;
+  }
+
   100% {
     /* Set the final state to move the logo far right and hide it */
     transform: translateX(73vw) rotate(360deg); 
@@ -290,7 +297,7 @@
 }
 
 .logotoright{
-  animation: logotoright 0.5s ease-in-out forwards;
+  animation: logotoright 0.6s ease-in forwards;
 }
 
 .panelHeader .logologo{
