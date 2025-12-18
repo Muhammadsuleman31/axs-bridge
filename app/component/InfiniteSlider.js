@@ -4,14 +4,14 @@ import styles from "./InfiniteSlider.module.css";
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 
 const slidesData = [
-  { id: 1, title: "Assurance", link: "/services/assurance", img: "services-icons/assurance-icon.svg" },
-  { id: 2, title: "Tax", link: "/services/tax", img: "services-icons/tax-icon.svg" },
-  { id: 3, title: "Advisory", link: "/services/advisory", img: "services-icons/advisory-icon.svg" },
-  { id: 4, title: "Business Solutions", link: "/services/business-solutions", img: "services-icons/business-solutions-icon.svg" },
-  { id: 5, title: "Corporate Finance", link: "/services/corporate-finance", img: "services-icons/corporate-finance-icon.svg" },
-  { id: 6, title: "Private Capital Solutions", link: "/services/private-capital", img: "services-icons/pcsc.svg" },
-  { id: 7, title: "Sustainability & ESG", link: "/services/sustainability-esg", img: "services-icons/esg.svg" },
-  { id: 8, title: "Hospitality Consulting", link: "/services/hospitality-consulting", img: "services-icons/hospitality-consulting.svg" }
+  { id: 1, title: "Assurance", link: "/services/assurance", img: "/services-icons/assurance-icon.svg" },
+  { id: 2, title: "Tax", link: "/services/tax", img: "/services-icons/tax-icon.svg" },
+  { id: 3, title: "Advisory", link: "/services/advisory", img: "/services-icons/advisory-icon.svg" },
+  { id: 4, title: "Business Solutions", link: "/services/business-solutions", img: "/services-icons/business-solutions-icon.svg" },
+  { id: 5, title: "Corporate Finance", link: "/services/corporate-finance", img: "/services-icons/corporate-finance-icon.svg" },
+  { id: 6, title: "Private Capital Solutions", link: "/services/private-capital", img: "/services-icons/pcsc.svg" },
+  { id: 7, title: "Sustainability & ESG", link: "/services/sustainability-esg", img: "/services-icons/esg.svg" },
+  { id: 8, title: "Hospitality Consulting", link: "/services/hospitality-consulting", img: "/services-icons/hospitality-consulting.svg" }
 ];
 
 function FiniteSlider() {
