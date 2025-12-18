@@ -10,9 +10,9 @@
 .sidebar {
   width: 300px;
   position: sticky;
-  top: 80px;
+  /* top: 80px; */
   align-self: flex-start;
-  padding-top: 2px;
+  /* padding-top: 2px; */
   margin-left: auto; /* Move sidebar to the right */
 }
 
@@ -21,8 +21,7 @@
    font-weight: 500;
     font-size: 0.90rem;
   display: block;
-  padding: 10px 30px;
-  margin-bottom: 4px;
+  padding: 12px 30px;
   color: #ffffff;
   text-decoration: none;
   position: relative;
@@ -40,7 +39,7 @@
   left: 0;
   bottom: -2px;
   width: 0%;
-  height: 2px;
+  /* height: 2px; */
   background: #004595;
   transition: width 0.3s ease;
 }
