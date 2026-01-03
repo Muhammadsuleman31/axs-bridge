@@ -8,7 +8,7 @@
 
 .navbar {
   width: 100%;
-  height: 69px;
+  height: 4.2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -124,7 +124,7 @@
 .dropdownMenu {
   position: absolute;
   
-  top: 5vw; /* start right below the navbar */
+  top: 4.2rem; /* start right below the navbar */
   left: 0;
   background: #ffffff;
   border-radius: 0px;
