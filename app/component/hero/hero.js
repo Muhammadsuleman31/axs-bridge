@@ -68,6 +68,7 @@ export default function hero() {
 
   useEffect(() => {
         // 1. Start the interval when the component mounts
+        
         startInterval(); 
 
         // 2. Cleanup function: This runs when the component unmounts.
