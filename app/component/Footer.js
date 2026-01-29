@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import styles from "./Footer.module.css";
-import { FaTwitter, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaTwitter, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FiArrowUpRight, FiChevronDown } from "react-icons/fi";
 import Image from 'next/image';
 import invertedaxs from '../../public/invertedaxs.svg'
@@ -58,8 +58,11 @@ function Footer() {
         <Image 
                 src={invertedaxs} 
                 alt="graph"   
-                layout="responsive"
-                objectFit="contain"
+                style={{
+                       width: '100%',
+                       height: 'auto',
+                       objectFit: 'contain', // Replaces objectFit="contain"
+                      }}
                 className={styles.logo}
                  onContextMenu={(e) => e.preventDefault()} 
         draggable={false} 
@@ -116,13 +119,13 @@ function Footer() {
             </div>
 
             <div className={`${styles.socialIcons} ${styles.open}`}>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
+              {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
                 <FaTwitter size={24} />
+              </a> */}
+              <a href="https://www.instagram.com/axsbridge?igsh=b3BpbnE1MTYxMmly" target="_blank" rel="noopener noreferrer">
+                <FaInstagram size={24} />
               </a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                <FaFacebookF size={24} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/company/axs-bridge/?viewAsMember=true" target="_blank" rel="noopener noreferrer">
                 <FaLinkedinIn size={24} />
               </a>
             </div>

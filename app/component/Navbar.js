@@ -68,8 +68,11 @@ const mobileTextClasses = `${styles.logotext} ${menuOpen ? styles.texttoleft : '
               <Image 
                 src={logofull} 
                 alt="graph"   
-                layout="responsive"
-                objectFit="contain"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  objectFit: 'contain', // Replaces objectFit="contain"
+                      }}
                 className={styles.navlogo1}
                 onContextMenu={(e) => e.preventDefault()} 
                  draggable={false}
@@ -123,8 +126,11 @@ const mobileTextClasses = `${styles.logotext} ${menuOpen ? styles.texttoleft : '
             {menuOpen ? <Image 
                 src={logocross} 
                 alt="graph"   
-                layout="responsive"
-                objectFit="contain"
+                 style={{
+                  width: '100%',
+                  height: 'auto',
+                  objectFit: 'contain', // Replaces objectFit="contain"
+                      }}
                 className={styles.cross}
                  onContextMenu={(e) => e.preventDefault()} 
         draggable={false} 
@@ -143,8 +149,11 @@ const mobileTextClasses = `${styles.logotext} ${menuOpen ? styles.texttoleft : '
                   <Image 
                     src={invertedaxs} 
                     alt="graph"   
-                    layout="responsive"
-                    objectFit="contain"
+                     style={{
+                       width: '100%',
+                       height: 'auto',
+                       objectFit: 'contain', // Replaces objectFit="contain"
+                      }}
                     className={styles.navlogo1}
                    onContextMenu={(e) => e.preventDefault()} 
         draggable={false} 

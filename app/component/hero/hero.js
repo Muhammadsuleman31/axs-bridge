@@ -127,8 +127,11 @@ export default function hero() {
            <Image 
                    src={layer} 
                    alt="graph"   
-                   layout="responsive"
-                   objectFit="contain"
+                   style={{
+                       width: '100%',
+                       height: 'auto',
+                       objectFit: 'contain', // Replaces objectFit="contain"
+                      }}
                     className={styles.desktoplayer}
                       onContextMenu={(e) => e.preventDefault()} 
         draggable={false} 
@@ -143,8 +146,11 @@ export default function hero() {
    <Image 
            src={graph} 
            alt="graph"   
-           layout="responsive"
-           objectFit="contain"
+           style={{
+                       width: '100%',
+                       height: 'auto',
+                       objectFit: 'contain', // Replaces objectFit="contain"
+                      }}
               onContextMenu={(e) => e.preventDefault()} 
         draggable={false} 
              />
@@ -169,8 +175,11 @@ export default function hero() {
      <Image 
              src={layer} 
              alt="graph"   
-             layout="responsive"
-             objectFit="contain"
+             style={{
+                       width: '100%',
+                       height: 'auto',
+                       objectFit: 'contain', // Replaces objectFit="contain"
+                      }}
                  onContextMenu={(e) => e.preventDefault()} 
         draggable={false} 
                 />
@@ -190,8 +199,11 @@ export default function hero() {
    <Image 
            src={graph} 
            alt="graph"   
-           layout="responsive"
-           objectFit="contain"
+          style={{
+                       width: '100%',
+                       height: 'auto',
+                       objectFit: 'contain', // Replaces objectFit="contain"
+                      }}
         className={styles.desktopgraph}
                onContextMenu={(e) => e.preventDefault()} 
         draggable={false} />
