@@ -1,7 +1,7 @@
 import Navbar from "./component/Navbar";
 import "./globals.css";
 import Footer from "./component/Footer"
-
+import FloatingButton from "./component/booking/FloatingButton"
 
 export const metadata = {
   title: "AXS BRIDGE",
@@ -20,6 +20,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         {children}
         <Footer/>
+        <FloatingButton />
       </body>
     </html>
   );

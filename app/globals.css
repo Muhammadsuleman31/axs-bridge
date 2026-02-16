@@ -89,7 +89,7 @@ a{
   background: linear-gradient(to right, #0085EA, #01017B); /* Slight reversal or change */
 
   color: #ffffff; 
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   transition: all 0.3s ease;
   border: none;
@@ -381,6 +381,40 @@ background-color: #fafafa;
 .servicesserviceItem a:hover {
   color: #004595;
 }
+
+
+
+.floating-btn {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  background-color: #000; /* Change to your brand color */
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: attention-hop 4s infinite ease-in-out;
+}
+
+.floating-btn:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
+@keyframes attention-hop {
+  0%, 100% { transform: translateY(0); }
+  10% { transform: translateY(-10px); } /* Hop up */
+  14% { transform: translateY(0) rotate(-3deg); } /* Land & wiggle */
+  18% { transform: translateY(0) rotate(3deg); }
+  22% { transform: translateY(0) rotate(0); }
+  /* Long pause where it stays still (the 78% remaining) */
+}
+
 
 @media (max-width: 468px) {
 
