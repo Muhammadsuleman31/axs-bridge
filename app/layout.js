@@ -30,10 +30,14 @@ export default function RootLayout({ children }) {
             fbq('track', 'PageView');
           `}
         </Script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=875178225514687&ev=PageView&noscript=1"
-/></noscript>
-
+<noscript>
+  <img 
+    height="1" 
+    width="1" 
+    style={{ display: 'none' }} 
+    src="https://www.facebook.com/tr?id=875178225514687&ev=PageView&noscript=1" 
+  />
+</noscript>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"></link>
       </head>
       <body>
