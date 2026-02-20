@@ -2,6 +2,7 @@ import Navbar from "./component/Navbar";
 import "./globals.css";
 import Footer from "./component/Footer"
 import FloatingButton from "./component/booking/FloatingButton"
+import Script from "next/script";
 
 export const metadata = {
   title: "AXS BRIDGE",
